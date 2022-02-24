@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style scoped>
+.carousel-inner{
+  height: 600px !important; 
+}
 .img-fluid {
   min-width: 800px !important;
 }
