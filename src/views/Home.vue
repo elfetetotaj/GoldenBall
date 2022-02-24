@@ -1,18 +1,18 @@
 <template>
     <div>
         <Slider />
-        <h2>Hello from home</h2>
-        <Contact-form />
+        <News />
     </div>
 </template>
 <script>
 import Slider from '../Components/HomePage/Slider.vue'
-import ContactForm from '../Components/ContactPage/ContactForm.vue'
+import News from '../Components/News.vue'
 export default {
-  components: { Slider, ContactForm },
+  components: { Slider, News },
     name:'Home',
 }
 </script>
 <style scoped>
 
 </style>
+
