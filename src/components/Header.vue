@@ -7,6 +7,7 @@
           <router-link class="dropdown-item" to="/">Home</router-link>
           <router-link class="dropdown-item" to="/info">Info</router-link>
           <router-link class="dropdown-item" to="/contact">Contact us</router-link>
+          <router-link class="dropdown-item" to="/register">Register</router-link>
         </div>
       </div>
       <!--Logo-->
@@ -16,8 +17,9 @@
       <!--Header navigation-->
       <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
         <router-link class="pl-5" to="/">Home</router-link>
-        <router-link class="px-5" to="/info">Info</router-link>
-        <router-link to="/contact">Contact us</router-link>
+        <router-link class="pl-5" to="/info">Info</router-link>
+        <router-link class="pl-5"  to="/contact">Contact us</router-link>
+        <router-link class="pl-5" to="/register">Register</router-link>
       </span>
 
        <p class="navbar-item ml-auto">
@@ -27,11 +29,6 @@
         <div class="user">
           <h5 style="cursor: pointer" data-toggle="modal" data-target="#userModal">Sign In</h5>
         </div>
-
-        <div class="bag" @click="openCart">
-             <!-- <img class="pb-1" src="@/assets/cart.svg"> -->
-            <span class="mb-3" v-if="this.bagItemscount > 0">{{ bagItemscount }}</span>
-        </div> 
     </nav>
     <!--User Modal-->
     <div class="modal fade" id="userModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
