@@ -31,13 +31,13 @@
           >
             <!-- Team Thumb-->
             <div class="advisor_thumb">
-              <img src="@/assets/avatar1.jpg" alt="" />
+              <img src="@/assets/avatar5.jpg" alt="" />
             </div>
             <!-- Team Details-->
             <div class="single_advisor_details_info">
-              <h5>Cristano Ronaldo</h5>
-              <p class="designation">Juventus</p>
-              <p class="designation"><strong>Price: $60.000.000</strong></p>
+              <h5>Robert Lewandowski</h5>
+              <p class="designation">FC Bayern Munich</p>
+              <p class="designation"><strong>Price: $85.000.000</strong></p>
             </div>
           </div>
         </div>
@@ -54,13 +54,13 @@
           >
             <!-- Team Thumb-->
             <div class="advisor_thumb">
-              <img src="@/assets/avatar2.jpg" alt="" />
+              <img src="@/assets/avatar6.jpg" alt="" />
             </div>
             <!-- Team Details-->
             <div class="single_advisor_details_info">
-              <h5>Lionel Messi</h5>
-              <p class="designation">Barcelona</p>
-              <p class="designation"><strong>Price: $80.000.000</strong></p>
+              <h5>Eden Hazard</h5>
+              <p class="designation">Real Madrid CF</p>
+              <p class="designation"><strong>Price: $65.000.000</strong></p>
             </div>
           </div>
         </div>
@@ -77,12 +77,12 @@
           >
             <!-- Team Thumb-->
             <div class="advisor_thumb">
-              <img src="@/assets/avatar3.jpg" alt="" />
+              <img src="@/assets/avatar7.jpg" alt="" />
             </div>
             <!-- Team Details-->
             <div class="single_advisor_details_info">
-              <h5>Neymar JR.</h5>
-              <p class="designation">Paris Saint-Germain</p>
+              <h5>Lautaro Martinez</h5>
+              <p class="designation">Inter Milan</p>
               <p class="designation"><strong>Price: $100.000.000</strong></p>
             </div>
           </div>
@@ -100,13 +100,13 @@
           >
             <!-- Team Thumb-->
             <div class="advisor_thumb">
-              <img src="@/assets/avatar4.jpg" alt="" />
+              <img src="@/assets/avatar8.jpg" alt="" />
             </div>
             <!-- Team Details-->
             <div class="single_advisor_details_info">
-              <h5>Scott McTominay</h5>
-              <p class="designation">Manchester United</p>
-              <p class="designation"><strong>Price: $75.000.000</strong></p>
+              <h5>Kevin De Bruyne</h5>
+              <p class="designation">Manchester City F.C.</p>
+              <p class="designation"><strong>Price: $95.000.000</strong></p>
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@ body {
   transition-duration: 500ms;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single_advisor_profile .single_advisor_details_info h6 {
+  .single_advisor_profile .single_advisor_details_info h5 {
     font-size: 14px;
   }
 }
@@ -249,8 +249,8 @@ body {
 .single_advisor_profile:focus .single_advisor_details_info::after {
   background-color: #ffffff;
 }
-.single_advisor_profile:hover .single_advisor_details_info h6,
-.single_advisor_profile:focus .single_advisor_details_info h6 {
+.single_advisor_profile:hover .single_advisor_details_info h5,
+.single_advisor_profile:focus .single_advisor_details_info h5 {
   color: #ffffff;
 }
 .single_advisor_profile:hover .single_advisor_details_info p,

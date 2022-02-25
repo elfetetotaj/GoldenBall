@@ -1,9 +1,9 @@
 <template>
   <section>
-    <div class="container mt-1 mb-5" style="background-color: black">
+    <div class="container mt-1 mb-5">
       <div class="row no-gutters">
         <div class="col-md-4 col-lg-4">
-          <img src="@/assets/meknews1.jpg" />
+          <img src="@/assets/meknews2.jpg" />
         </div>
         <div class="col-md-8 col-lg-8">
           <div class="d-flex flex-column">
@@ -19,7 +19,7 @@
               "
             >
               <h3 class="display-5">
-                Kylian Mbappé - Paris Saint-Germain F.C.
+                Erling Haaland - Borussia Dortmund
               </h3>
             </div>
             <div class="p-3 bg-black text-white">
@@ -27,16 +27,16 @@
             </div>
             <div class="d-flex flex-row text-white">
               <div class="p-4 bg-success text-center skill-block">
-                <h4><strong>50%</strong></h4>
-                <h6><b>Real Madrid</b></h6>
+                <h4><strong>40%</strong></h4>
+                <h6><b>Barcelona</b></h6>
               </div>
               <div class="p-3 bg-dark text-center text-black skill-block">
-                <h4>30%</h4>
-                <h6>Barcelona</h6>
+                <h4>35%</h4>
+                <h6>Manchester City</h6>
               </div>
               <div class="p-3 bg-dark text-center skill-block">
-                <h4>15%</h4>
-                <h6>Manchester United</h6>
+                <h4>20%</h4>
+                <h6>Real Madrid</h6>
               </div>
               <div class="p-3 bg-dark text-center text-black skill-block">
                 <h4>5%</h4>

@@ -15,7 +15,8 @@
           >
             <br />
             <h3>Merkato Summer For 2022</h3>
-            <p>Lastest Price For Best Players</p>
+            <hr>
+            <p>Lastest Price For Best Players</p><hr>
             <div class="line"></div>
           </div>
         </div>
@@ -39,7 +40,7 @@
             <!-- Team Details-->
             <div class="single_advisor_details_info">
               <h5>Cristano Ronaldo</h5>
-              <p class="designation">Juventus</p>
+              <p class="designation">Juventus F.C.</p>
               <p class="designation"><strong>Price: $60.000.000</strong></p>
             </div>
           </div>
@@ -62,7 +63,7 @@
             <!-- Team Details-->
             <div class="single_advisor_details_info">
               <h5>Lionel Messi</h5>
-              <p class="designation">Barcelona</p>
+              <p class="designation">FC Barcelona</p>
               <p class="designation"><strong>Price: $80.000.000</strong></p>
             </div>
           </div>
@@ -85,7 +86,7 @@
             <!-- Team Details-->
             <div class="single_advisor_details_info">
               <h5>Neymar JR.</h5>
-              <p class="designation">Paris Saint-Germain</p>
+              <p class="designation">Paris Saint-Germain F.C.</p>
               <p class="designation"><strong>Price: $100.000.000</strong></p>
             </div>
           </div>
@@ -108,7 +109,7 @@
             <!-- Team Details-->
             <div class="single_advisor_details_info">
               <h5>Scott McTominay</h5>
-              <p class="designation">Manchester United</p>
+              <p class="designation">Manchester United F.C.</p>
               <p class="designation"><strong>Price: $75.000.000</strong></p>
             </div>
           </div>
@@ -215,7 +216,7 @@ body {
   transition-duration: 500ms;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .single_advisor_profile .single_advisor_details_info h6 {
+  .single_advisor_profile .single_advisor_details_info h5 {
     font-size: 14px;
   }
 }
@@ -252,8 +253,8 @@ body {
 .single_advisor_profile:focus .single_advisor_details_info::after {
   background-color: #ffffff;
 }
-.single_advisor_profile:hover .single_advisor_details_info h6,
-.single_advisor_profile:focus .single_advisor_details_info h6 {
+.single_advisor_profile:hover .single_advisor_details_info h5,
+.single_advisor_profile:focus .single_advisor_details_info h5 {
   color: #ffffff;
 }
 .single_advisor_profile:hover .single_advisor_details_info p,

@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container mt-1 mb-5" style="background-color: black">
+    <div class="container mt-1 mb-5">
       <div class="row no-gutters">
         <div class="col-md-4 col-lg-4">
           <img src="@/assets/meknews1.jpg" />
