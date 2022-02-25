@@ -7,7 +7,7 @@
 </template>
 <script>
 import Slider from '../Components/HomePage/Slider.vue'
-import News from '../Components/News.vue'
+import News from '../Components/Content/News.vue'
 import Calander from '../Components/Calander.vue'
 export default {
   components: { Slider, News, Calander },

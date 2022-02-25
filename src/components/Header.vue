@@ -17,10 +17,9 @@
       <!--Header navigation-->
       <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
         <router-link class="pl-5" to="/">Home</router-link>
-        <router-link class="pl-5" to="/info">Info</router-link>
+        <router-link class="pl-5" to="/info">Merkato</router-link>
         <router-link class="pl-5"  to="/contact">Contact us</router-link>
         <router-link class="pl-5" to="/register">Register</router-link>
-        <router-link class="pl-5" to="/info">Merkato </router-link>
         <router-link  to="/contact">Contact</router-link>
       </span>
 
