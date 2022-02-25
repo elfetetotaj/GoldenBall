@@ -2,12 +2,14 @@
   <div id="app">
     <Header/>
     <router-view />
-    <img alt="Vue logo" src="./assets/logo.png">
     <Footer />
   </div>
 </template>
 
+
 <script>
+
+
 import Header from './Components/Header.vue'
 import Footer from './Components/Footer.vue'
 

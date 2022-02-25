@@ -1,113 +1,276 @@
 <template>
-  <footer class="footer-04">
+  <section class="ftco-section">
     <div class="container">
+      <div class="row justify-content-center"></div>
       <div class="row">
-        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-          <h2 class="footer-heading"><a href="#" class="logo">Colorlib</a></h2>
-          <p>
-            A small river named Duden flows by their place and supplies it with
-            the necessary regelialia.
-          </p>
-          <a href="#"
-            >read more <span class="ion-ios-arrow-round-forward"></span
-          ></a>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-          <h2 class="footer-heading">Categories</h2>
-          <ul class="list-unstyled">
-            <li><a href="#" class="py-1 d-block">Buy &amp; Sell</a></li>
-            <li><a href="#" class="py-1 d-block">Merchant</a></li>
-            <li><a href="#" class="py-1 d-block">Giving back</a></li>
-            <li><a href="#" class="py-1 d-block">Help &amp; Support</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-          <h2 class="footer-heading">Tag cloud</h2>
-          <div class="tagcloud">
-            <a href="#" class="tag-cloud-link">dish</a>
-            <a href="#" class="tag-cloud-link">menu</a>
-            <a href="#" class="tag-cloud-link">food</a>
-            <a href="#" class="tag-cloud-link">sweet</a>
-            <a href="#" class="tag-cloud-link">tasty</a>
-            <a href="#" class="tag-cloud-link">delicious</a>
-            <a href="#" class="tag-cloud-link">desserts</a>
-            <a href="#" class="tag-cloud-link">drinks</a>
+        <div class="col-md-12">
+          <h4 class="text-center mb-4">Match Schedule Table</h4>
+          <div class="table-wrap">
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <th>Monday</th>
+                  <th>Tuesday</th>
+                  <th>Wednesday</th>
+                  <th>Thursday</th>
+                  <th>Friday</th>
+                  <th>Saturday</th>
+                  <th>Sunday</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(../assets/news2.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Match Day</strong> <br />
+                      ><strong>Real Madrid vs Barcelona</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-2.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-3.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-4.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-5.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-6.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-7.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-1.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-2.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-3.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-4.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-5.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-6.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-7.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-1.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-2.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-3.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td><i class="fa fa-close"></i></td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-4.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                  <td class="text-center">
+                    <div
+                      class="img rounded-circle mb-2"
+                      style="background-image: url(images/classes-5.jpg)"
+                    ></div>
+                    <a href="#"
+                      ><strong>Yoga training</strong> <br />
+                      7 am-6 am</a
+                    >
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>
+                    <a href="#"
+                      ><i class="fa fa-long-arrow-left"></i> September</a
+                    >
+                  </th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>
+                    <a href="#"
+                      >November <i class="fa fa-long-arrow-right"></i
+                    ></a>
+                  </th>
+                </tr>
+              </tfoot>
+            </table>
           </div>
-        </div>
-        <div class="col-md-6 col-lg-3 mb-md-0 mb-4">
-          <h2 class="footer-heading">Subcribe</h2>
-          <form action="#" class="subscribe-form">
-            <div class="form-group d-flex">
-              <input
-                type="text"
-                class="form-control rounded-left"
-                placeholder="Enter email address"
-              />
-              <button type="submit" class="form-control submit rounded-right">
-                <span class="sr-only">Submit</span><i class="ion-ios-send"></i>
-              </button>
-            </div>
-          </form>
-          <h2 class="footer-heading mt-5">Follow us</h2>
-          <ul class="ftco-footer-social p-0">
-            <li class="ftco-animate">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Twitter"
-                ><span class="ion-logo-twitter"></span
-              ></a>
-            </li>
-            <li class="ftco-animate">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Facebook"
-                ><span class="ion-logo-facebook"></span
-              ></a>
-            </li>
-            <li class="ftco-animate">
-              <a
-                href="#"
-                data-toggle="tooltip"
-                data-placement="top"
-                title="Instagram"
-                ><span class="ion-logo-instagram"></span
-              ></a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
-    <div class="w-100 mt-5 border-top py-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-8">
-            <p class="copyright">
-              All rights reserved | This template is made with
-              <i class="ion-ios-heart" aria-hidden="true"></i> by
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-4 text-md-right">
-            <p class="mb-0 list-unstyled">
-              <a class="mr-md-3" href="#">Terms</a>
-              <a class="mr-md-3" href="#">Privacy</a>
-              <a class="mr-md-3" href="#">Compliances</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  </section>
 </template>
+
 
 <script>
 export default {
-  name: "Footer",
+  name: "Calander",
 };
 </script>
+
 
 <style scoped>
 /*!
@@ -10748,21 +10911,26 @@ a.text-dark:focus {
 }
 
 body {
-  font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.8;
   font-weight: normal;
+  background: #fff;
+  color: gray;
 }
 
 a {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
+  color: #ffafb0;
 }
 a:hover,
 a:focus {
   text-decoration: none !important;
   outline: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 h1,
@@ -10777,183 +10945,105 @@ h5,
 .h5 {
   line-height: 1.5;
   font-weight: 400;
-  font-family: "Nunito Sans", Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
+  color: #000;
 }
 
-.img,
-.blog-img,
-.user-img {
+.bg-primary {
+  background: #ffafb0 !important;
+}
+
+.ftco-section {
+  padding: 7em 0;
+}
+
+.ftco-no-pt {
+  padding-top: 0;
+}
+
+.ftco-no-pb {
+  padding-bottom: 0;
+}
+
+.heading-section {
+  font-size: 28px;
+  color: #000;
+}
+
+.img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.ftco-footer-social li {
-  list-style: none;
-  margin: 0 10px 0 0;
-  display: inline-block;
-}
-.ftco-footer-social li a {
-  height: 40px;
-  width: 40px;
-  display: block;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  position: relative;
-}
-.ftco-footer-social li a span {
-  position: absolute;
-  font-size: 20px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-.ftco-footer-social li a:hover {
-  color: #fff;
+.table-wrap {
+  overflow-x: scroll;
 }
 
-.form-control {
-  height: 52px;
+.table {
+  min-width: 1000px !important;
+  width: 100%;
   background: #fff;
-  color: #000;
-  font-size: 18px;
-  border-radius: 0px;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  box-shadow: 0px 5px 12px -12px rgba(0, 0, 0, 0.29);
+  text-align: center;
 }
-.form-control:focus,
-.form-control:active {
-  outline: none !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-textarea.form-control {
-  height: inherit !important;
-}
-
-.tagcloud a {
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 4px 10px;
-  margin-bottom: 7px;
-  margin-right: 4px;
-  border-radius: 4px;
-  font-size: 11px;
-}
-.tagcloud a:hover {
-  border: 1px solid #000;
-}
-
-.ftco-section {
-  padding: 12em 0;
-}
-.ftco-section h2 {
-  margin-bottom: 0;
-}
-
-footer {
-  padding: 7em 0;
-}
-
-.footer-04 {
-  background: #272727;
-  padding-bottom: 0;
-}
-.footer-04 .border-top {
-  border-color: #1a1a1a !important;
-  background: #1a1a1a;
-}
-.footer-04 .footer-heading {
-  font-size: 13px;
-  color: #fff;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-.footer-04 .footer-heading .logo {
-  letter-spacing: none;
-  font-size: 16px;
-  color: #fff;
-  text-transform: capitalize;
-}
-.footer-04 p {
-  color: rgba(255, 255, 255, 0.3);
-}
-.footer-04 a {
-  color: #f7b633;
-}
-.footer-04 .ftco-footer-social li a {
-  color: #fff;
-}
-.footer-04 .tagcloud a {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-.footer-04 .list-unstyled li a {
-  color: rgba(255, 255, 255, 0.7);
-}
-.footer-04 .list-unstyled a {
-  color: rgba(255, 255, 255, 0.7);
-}
-.footer-04 .ftco-footer-social li a {
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-.footer-04 .subscribe-form .form-group {
-  position: relative;
-  margin-bottom: 0;
-  border-radius: 0;
-}
-.footer-04 .subscribe-form .form-group input {
-  background: rgba(255, 255, 255, 0.05) !important;
-  border: none !important;
-  outline: none !important;
-  color: rgba(255, 255, 255, 0.3) !important;
-  font-size: 16px;
-  border-radius: 0;
-}
-.footer-04 .subscribe-form .form-group input::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  color: rgba(255, 255, 255, 0.3) !important;
-}
-.footer-04 .subscribe-form .form-group input::-moz-placeholder {
-  /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.3) !important;
-}
-.footer-04 .subscribe-form .form-group input:-ms-input-placeholder {
-  /* IE 10+ */
-  color: rgba(255, 255, 255, 0.3) !important;
-}
-.footer-04 .subscribe-form .form-group input:-moz-placeholder {
-  /* Firefox 18- */
-  color: rgba(255, 255, 255, 0.3) !important;
-}
-.footer-04 .subscribe-form .form-group input:focus {
-  outline: none !important;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-.footer-04 .subscribe-form .form-group .submit {
-  color: #fff !important;
-  display: block;
-  width: 52px;
-  height: 52px;
-  font-size: 16px;
-  background: #f7b633 !important;
+.table thead th {
   border: none;
-  border-radius: 0;
+  padding: 30px;
+  font-size: 14px;
+  color: #000;
 }
-.footer-04 .subscribe-form .form-group .submit:hover,
-.footer-04 .subscribe-form .form-group .submit:focus {
-  text-decoration: none !important;
-  outline: none !important;
+.table tbody tr {
+  margin-bottom: 10px;
 }
-.footer-04 .copyright a {
-  color: rgba(255, 255, 255, 0.5);
+.table tbody td {
+  padding: 30px;
+  font-size: 14px;
+  background: #fff;
+  vertical-align: middle;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .table tbody td {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+.table tbody td i {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.3);
+}
+.table tbody td .img {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+.table tbody td a {
+  display: block;
+  color: #ffafb0;
+  font-size: 12px;
+}
+.table tbody td a strong {
+  font-size: 12px;
+  font-weight: 600;
+  color: #666666;
+}
+.table tbody td:hover {
+  background: whitesmoke;
+}
+.table tfoot tr th a {
+  font-weight: 400;
+  color: #000;
+}
+.table tfoot tr th a i {
+  font-size: 12px;
+}
+.table tfoot tr th a:hover {
+  color: #ffafb0;
 }
 </style>

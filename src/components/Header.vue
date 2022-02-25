@@ -1,6 +1,6 @@
 <template>
   <div class="container-flex">
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar" style="background-color:white">
       <div class="dropdown d-xl-none d-lg-none mr-auto">
         <!-- <img src="https://png.icons8.com/windows/32/000000/menu.png" data-toggle="dropdown" data-target="#navd" aria-haspopup="true" aria-expanded="false"> -->
         <div class="dropdown-menu hb" aria-labelledby="navd">
@@ -20,6 +20,8 @@
         <router-link class="pl-5" to="/info">Info</router-link>
         <router-link class="pl-5"  to="/contact">Contact us</router-link>
         <router-link class="pl-5" to="/register">Register</router-link>
+        <router-link class="pl-5" to="/info">Merkato </router-link>
+        <router-link  to="/contact">Contact</router-link>
       </span>
 
        <p class="navbar-item ml-auto">
