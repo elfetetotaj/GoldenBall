@@ -220,5 +220,5 @@ export default {
 
 
 <style scoped>
-@import '../style/calander.css';
+@import '../../style/calander.css';
 </style>

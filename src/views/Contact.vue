@@ -1,17 +1,13 @@
 <template>
-    <div>
-        <ContactUs />
-    </div>
+    <ContactUs />
 </template>
 <script>
-
-import ContactUs from '../Components/ContactUs.vue'
-
+import ContactUs from '@/Components/Contact/ContactUs.vue'
 export default {
-  components: {ContactUs,},
-    name:'Contact',
-}
+  components: {
+    ContactUs
+  },
+};
 </script>
 <style scoped>
-
 </style>

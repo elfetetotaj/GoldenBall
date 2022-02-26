@@ -7,6 +7,7 @@
           <router-link class="dropdown-item" to="/">Home</router-link>
           <router-link class="dropdown-item" to="/info">Info</router-link>
           <router-link class="dropdown-item" to="/contact">Contact us</router-link>
+          <router-link class="dropdown-item" to="/about">About</router-link>
           <router-link class="dropdown-item" to="/register">Register</router-link>
         </div>
       </div>
@@ -19,12 +20,11 @@
         <router-link class="pl-5" to="/">Home</router-link>
         <router-link class="pl-5" to="/info">Merkato</router-link>
         <router-link class="pl-5"  to="/contact">Contact</router-link>
+        <router-link class="pl-5" to="/about">About</router-link>
         <router-link class="pl-5" to="/register">Register</router-link>
       </span>
-
        <p class="navbar-item ml-auto">
         <div class="searc d-none d-xl-block d-lg-block pr-3">
-          <input type="search" class="search">
         </div>
         <div class="user">
           <h5 style="cursor: pointer" data-toggle="modal" data-target="#userModal">Sign In</h5>
@@ -35,6 +35,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-body">
+            
             <button type="button" class="close" data-dismiss="modal" style="outline-style:none;" aria-label="Close">
               <span>x</span>
             </button>
@@ -63,13 +64,10 @@
         </div>
       </div>
     </div>
-    <!--Cart Component-->
     </div>
 </template>
 
 <script>
-// import Cart from '@/Components/Cart.vue'
-
 export default {
   name: 'Header',
 }

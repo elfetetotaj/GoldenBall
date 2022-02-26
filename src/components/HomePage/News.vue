@@ -87,5 +87,5 @@ export default {
 <style scoped>
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 /* This pen */
-@import '../style/news.css'
+@import '../../style/news.css';
 </style>
