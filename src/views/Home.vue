@@ -8,8 +8,8 @@
 </template>
 <script>
 import Slider from "@/Components/HomePage/Slider.vue";
-import News from "@/Components/News.vue";
-import Calander from "@/Components/Calander.vue";
+import News from "@/Components/HomePage/News.vue";
+import Calander from "@/Components/HomePage/Calander.vue";
 import {mapGetters} from 'vuex';
 
 export default {

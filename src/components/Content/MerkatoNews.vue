@@ -18,7 +18,7 @@
                 text-white
               "
             >
-              <h3 class="display-5">
+              <h3 class="display-5" style="color: white">
                 Kylian Mbappé - Paris Saint-Germain F.C.
               </h3>
             </div>

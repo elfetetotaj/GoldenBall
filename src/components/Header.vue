@@ -6,12 +6,8 @@
         <div class="dropdown-menu hb" aria-labelledby="navd">
           <router-link class="dropdown-item" to="/">Home</router-link>
           <router-link class="dropdown-item" to="/info">Merkato</router-link>
-          <router-link class="dropdown-item" to="/contact"
-            >Contact us</router-link
-          >
-          <router-link class="dropdown-item" to="/register"
-            >Register</router-link
-          >
+          <router-link class="dropdown-item" to="/contact">Contact us</router-link>
+          <router-link class="dropdown-item" to="/register">Register</router-link>
           <router-link class="dropdown-item" to="/login">Login</router-link>
         </div>
       </div>
@@ -37,7 +33,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 nav {
   z-index: 100;
 }

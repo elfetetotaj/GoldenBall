@@ -2,26 +2,26 @@
   <section>
     <div class="container-fluid py-5">
       <div class="row d-flex">
-        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 order-sm-0 order-12" style="margin-right:-120px;">
-          <!-- <img class="img-fluid" src="@/assets/con.jpg"> -->
+        <div class="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 order-sm-0 order-12" style="margin-right:-150px;">
+          <img class="img-fluid" src="@/assets/bg1.jpg" style="height: 75.5%;">
         </div>
         <div class="col-12 col-xl-6 col-lg-5 col-md-6 col-sm-12 order-first order-xl-0">
           <h1>Hello there</h1>
           <h2 style="color:grey">got a thought to discuss?</h2>
-          <form>
+          <form style="text-align: -webkit-left;">
             <div class="form-group">
               <input type="text" class="form-control" required>
-              <label class="label" for="name">Name</label>
+              <label class="label" for="name" style="color:white"><b>Name</b></label>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control" required>
-              <label class="label" for="E-mail">E-mail</label>
+              <input type="email" class="form-control text-center" style="color:blue" required>
+              <label class="label" for="E-mail" style="color:white"><b>E-mail</b></label>
             </div>
             <div class="form-group">
               <textarea class="form-control" style="overflow:hidden; height:130px" rows="3" required></textarea>
-              <label class="label" for="Message">Message</label>
+              <label class="label" for="Message" style="color:white"><b>Message</b></label>
             </div>
-              <button class="btn btn-light" href="#" role="button">submit</button>
+              <button class="btn btn-light" href="#" style="background-color:black; color:white" role="button">Submit</button>
           </form>
         </div>
         </div>
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'ContactForm'
+  name: 'ContactUs'
 }
 </script>
 
