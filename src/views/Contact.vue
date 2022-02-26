@@ -1,10 +1,14 @@
 <template>
     <div>
-        <h2>Hello from contact</h2>
+        <ContactUs />
     </div>
 </template>
 <script>
+
+import ContactUs from '../Components/ContactUs.vue'
+
 export default {
+  components: {ContactUs,},
     name:'Contact',
 }
 </script>
