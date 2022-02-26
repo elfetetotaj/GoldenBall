@@ -5,7 +5,7 @@ const Home = () => import('@/views/Home.vue');
 const Contact = () => import('@/views/Contact.vue');
 const Info = () => import('@/views/Info.vue');
 const Register = () => import('@/views/Register.vue');
-
+const Login = () => import ('@/views/Login.vue')
 
 Vue.use(Router)
 
@@ -30,6 +30,11 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login
     }
   ],
   mode: 'history'
