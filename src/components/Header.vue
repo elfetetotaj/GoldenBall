@@ -6,7 +6,8 @@
         <div class="dropdown-menu hb" aria-labelledby="navd">
           <router-link class="dropdown-item" to="/">Home</router-link>
           <router-link class="dropdown-item" to="/info">Merkato</router-link>
-          <router-link class="dropdown-item" to="/contact">Contact us</router-link>
+          <router-link class="dropdown-item" to="/contact">Contact</router-link>
+          <router-link class="dropdown-item" to="/about">About</router-link>
           <router-link class="dropdown-item" to="/register">Register</router-link>
           <router-link class="dropdown-item" to="/login">Login</router-link>
         </div>
@@ -19,7 +20,8 @@
       <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
         <router-link class="pl-5" to="/">Home</router-link>
         <router-link class="pl-5" to="/info">Merkato</router-link>
-        <router-link class="pl-5" to="/contact">Contact us</router-link>
+        <router-link class="pl-5" to="/contact">Contact</router-link>
+        <router-link class="pl-5" to="/about">About</router-link>
         <router-link class="pl-5" to="/register">Register</router-link>
         <router-link class="pl-5" to="/login">Login</router-link>
       </span>
