@@ -6,19 +6,19 @@
           <img class="img-fluid" src="@/assets/bg1.jpg" style="height: 75.5%;">
         </div>
         <div class="col-12 col-xl-6 col-lg-5 col-md-6 col-sm-12 order-first order-xl-0">
-          <h1>Hello there</h1>
+          <h1>Hello, Football Fan</h1>
           <h2 style="color:grey">got a thought to discuss?</h2>
           <form style="text-align: -webkit-left;">
             <div class="form-group">
-              <input type="text" class="form-control" required>
+              <input type="text" class="form-control" style="color:black; text-indent: 110px;" required>
               <label class="label" for="name" style="color:white"><b>Name</b></label>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control text-center" style="color:blue" required>
+              <input type="email" class="form-control" style="color:black; text-indent: 110px;" required>
               <label class="label" for="E-mail" style="color:white"><b>E-mail</b></label>
             </div>
             <div class="form-group">
-              <textarea class="form-control" style="overflow:hidden; height:130px" rows="3" required></textarea>
+              <textarea class="form-control" id="texting" style="overflow:hidden; height:130px; color:black;"  required></textarea>
               <label class="label" for="Message" style="color:white"><b>Message</b></label>
             </div>
               <button class="btn btn-light" href="#" style="background-color:black; color:white" role="button">Submit</button>
@@ -36,6 +36,11 @@ export default {
 </script>
 
 <style scoped>
+#texting{
+  text-indent: 110px;
+}
+
+
 form {
   width: 100%;
   padding: 50px 0;
