@@ -9,6 +9,9 @@ const Country = () => import('@/views/Country.vue');
 const About = () => import('@/views/About.vue');
 const Register = () => import('@/views/Register.vue');
 const Login = () => import ('@/views/Login.vue')
+const CreatePlayer = () => import ('./Components/Player/CreatePlayer');
+const EditPlayer = () => import ('./Components/Player/EditPlayer');
+const ListPlayer = () => import ('./Components/Player/ListPlayer');
 
 Vue.use(Router)
 
@@ -53,6 +56,21 @@ export default new Router({
       path: '/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/player',
+      name:'CreatePlayer',
+      component: CreatePlayer
+    },
+    {
+      path: '/',
+      name:'EditPlayer',
+      component: EditPlayer
+    },
+    {
+      path: '/',
+      name:'ListPlayer',
+      component: ListPlayer
     }
   ],
   mode: 'history'

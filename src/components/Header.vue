@@ -12,6 +12,7 @@
           <router-link class="dropdown-item" to="/about">About</router-link>
           <router-link class="dropdown-item" to="/register">Register</router-link>
           <router-link class="dropdown-item" to="/login">Login</router-link>
+          <router-link class="dropdown-item" to="/player">Players</router-link>
         </div>
       </div>
       <!--Logo-->
@@ -28,6 +29,7 @@
         <router-link class="pl-5" to="/about">About</router-link>
         <router-link class="pl-5" to="/register">Register</router-link>
         <router-link class="pl-5" to="/login">Login</router-link>
+        <router-link class="pl-5" to="/player">Players</router-link>
       </span>
     </nav>
   </div>

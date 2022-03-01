@@ -2,9 +2,9 @@
   "name": "golden-ball-api",
   "version": "1.0.0",
   "description": "",
-  "main": "sever.js",
+  "main": "sever.ts",
   "scripts": {
-    "start": "nodemon -r esm server.js",
+    "start": "nodemon -r esm server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -16,7 +16,10 @@
     "express": "^4.17.3",
     "firebase-admin": "^10.0.2",
     "helmet": "^5.0.2",
-    "joi": "^17.6.0"
+    "joi": "^17.6.0",
+    "mongoose": "^6.2.3",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.6.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
