@@ -1,77 +1,91 @@
 import Vue from 'vue'
+import VueRouter from 'vue-router';
 import Router from 'vue-router'
-
-const Home = () => import('@/views/Home.vue');
-const Contact = () => import('@/views/Contact.vue');
-const Info = () => import('@/views/Info.vue');
-const Table = () => import('@/views/Table.vue');
-const Country = () => import('@/views/Country.vue');
-const About = () => import('@/views/About.vue');
-const Register = () => import('@/views/Register.vue');
-const Login = () => import ('@/views/Login.vue')
-const CreatePlayer = () => import ('./components/Player/CreatePlayer');
-const EditPlayer = () => import ('./components/Player/EditPlayer');
-const ListPlayer = () => import ('./components/Player/ListPlayer');
+import Home from './views/Home.vue'
 
 Vue.use(Router)
 
-export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'Home',
-      component: Home
-    },
-    {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact
-    },
-    {
-      path: '/table',
-      name: 'Table',
-      component: Table
-    },
-    {
-      path: '/country',
-      name: 'Country',
-      component: Country
-    },
-    {
-      path: '/info',
-      name: 'Info',
-      component: Info
-    },
-    {
-      path: '/about',
-      name: 'About',
-      component: About
-    },
-    {
-      path: '/register',
-      name: 'Register',
-      component: Register
-    },
-    {
-      path: '/login',
-      name: 'Login',
-      component: Login
-    },
-    {
-      path: '/createPlayer',
-      name:'CreatePlayer',
-      component: CreatePlayer
-    },
-    {
-      path: '/',
-      name:'EditPlayer',
-      component: EditPlayer
-    },
-    {
-      path: '/',
-      name:'ListPlayer',
-      component: ListPlayer
-    }
-  ],
-  mode: 'history'
-})
+
+const routes = [
+  {
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
+  {
+    path: "/contact",
+    name: "Contact",
+    // route level code-splitting
+    // this generates a separate chunk (contact.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "contact" */ "./views/Contact.vue"),
+  },
+  {
+    path: "/table",
+    name: "Table",
+    component: () =>
+      import(/* webpackChunkName: "table" */ "./views/Table.vue"),
+  },
+  {
+    path: "/country",
+    name: "Country",
+    component: () =>
+      import(/* webpackChunkName: "country" */ "./views/Country.vue"),
+  },
+  {
+    path: "/info",
+    name: "Info",
+    component: () =>
+      import(/* webpackChunkName: "info" */ "./views/Info.vue"),
+  },
+  {
+    path: "/about",
+    name: "About",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "./views/About.vue"),
+  },
+  {
+    path: "/register",
+    name: "Register",
+    component: () =>
+      import(/* webpackChunkName: "register" */ "./views/Register.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    component: () =>
+      import(/* webpackChunkName: "login" */ "./views/Login.vue"),
+  },
+  {
+    path: "/createPlayer",
+    name: "CreatePlayer",
+    component: () =>
+      import(/* webpackChunkName: "createPlayer" */ "./views/Players/CreatePlayer.vue"),
+  },
+];
+
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  routes,
+});
+
+// router.beforeEach((to, from, next) => {
+//   onAuthStateChanged(getAuth(), async (user) => {
+//     if (to.matched.some((record) => record.meta.isAuthenticated && !user)) {
+//       next("/login");
+//     } else if (to.matched.some((record) => record.meta.isAdmin)) {
+//       const tokenResult = await getAuth().currentUser.getIdTokenResult();
+//       if (!tokenResult.claims.admin) {
+//         next("/listing");
+//       } else {
+//         next();
+//       }
+//     } else {
+//       next();
+//     }
+//   });
+// });
+
+export default router;
