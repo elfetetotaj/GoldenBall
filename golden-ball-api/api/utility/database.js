@@ -40,27 +40,27 @@ export default {
 
         const nextId = Math.max(...ids) + 1;
 
-        const newRealEstate = { ...realEstate, id: nextId };
+        const newPlayer = { ...player, id: nextId };
 
         fs.writeFileSync(
           `${dbDirname}/${nextId}`,
-          JSON.stringify(newRealEstate)
+          JSON.stringify(newPlayer)
         );
-        return newRealEstate;
+        return newPlayer;
       },
-      update: (updatedRealEstate) => {
+      update: (updatedPalyer) => {
         // old version realEstate
         // new version updatedRealEstate
 
-        const oldVersionFilename = `${updatedRealEstate.id}.json`;
+        const oldVersionFilename = `${updatedPlayer.id}.json`;
 
         const filepath = dbDirname + oldVersionFilename;
 
         const contentAsString = fs.readFileSync(filepath);
 
-        const oldRealEstate = JSON.parse(contentAsString);
+        const oldPlayer = JSON.parse(contentAsString);
 
-        const updatedVersion = { ...oldRealEstate, ...updatedRealEstate };
+        const updatedVersion = { ...oldPlayer, ...updatedPlayer };
 
         fs.writeFileSync(filepath, JSON.stringify(updatedVersion));
 

@@ -1,82 +1,60 @@
 <template>
-  <div class="row justify-contect-center">
-    <div class="col-md-6">
-      <h3 class="text-center">Create Player</h3>
-      <form @submit.prevent="">
-        <div class="form-group">
-          <label for="">Name</label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="player.name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Last Name</label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="player.lastName"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="">birthday</label>
-          <input
-            type="number"
-            class="form-control"
-            v-model="player.birthday"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Position</label>
-          <input
-            type="text"
-            class="form-control"
-            v-model="player.position"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <button class="btn btn-danger btn-block">Create</button>
-        </div>
-      </form>
+  <section>
+    <div class="row justify-content-center">
+      <div class="col-8 col-md-6 col-lg-5">
+        <form @submit.prevent="createPlayer">
+          <div class="form-group">
+            <StringInput v-model="form.name" placeholder="Name" />
+          </div>
+          <div class="form-group">
+            <StringInput v-model="form.lastName" placeholder="Last Name"/>
+          </div>
+          <div class="form-group">
+            <StringInput v-model="form.position" placeholder="Position"/>
+          </div>
+          <div class="form-group">
+            <NumberInput v-model="form.goals" placeholder="Goals" />
+          </div>
+
+          <div class="form-group">
+            <NumberInput v-model="form.price" placeholder="Price"/>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary" type="submit">Publish</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import axios from "axios";
+import apiRequest from "../../utility/apiRequest";
+import StringInput from "../../Components/form/StringInput.vue";
+import NumberInput from "../../Components/form/NumberInput.vue";
+
 export default {
+  components: {
+    StringInput,
+    NumberInput,
+  },
   data() {
     return {
-      player: {
+      form: {
         name: "",
         lastName: "",
-        birthday: "",
         position: "",
+        goals: "",
+        price: "",
       },
+      error: null,
     };
   },
   methods: {
-    handleSubmitForm() {
-      var apiURL = "http://localhost:4000/api/create-player";
-      axios
-        .post(apiURL, this.player)
-        .then(() => {
-          this.$router.push("/view");
-          this.player = {
-            name: "",
-            lastName: "",
-            birthday: "",
-            position: "",
-          };
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    async createPlayer() {
+      const newPlayer = await apiRequest.createPlayer({ ...this.form });
+      this.$router.push({ name: "Players", params: { id: newPlayer._id } });
     },
   },
 };

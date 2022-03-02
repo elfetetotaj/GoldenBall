@@ -58,7 +58,7 @@ export default new Router({
       component: Login
     },
     {
-      path: '/player',
+      path: '/createPlayer',
       name:'CreatePlayer',
       component: CreatePlayer
     },

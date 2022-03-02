@@ -11,7 +11,7 @@ import playerRouter from "./api/routes/playerRoute";
 mongoose.connect("mongodb://localhost:27017/goldenBall").then(() => {
   console.log("Connected to mongodb port 27017");
 
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 4000;
 
 const app = express();
 

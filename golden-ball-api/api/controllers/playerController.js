@@ -5,10 +5,9 @@ import playerModel from "../models/playerModel";
 
 export default {
     list: async (req, res) => {
-        const list = await playerModel.find();
-        // database.collection("golden-ball").list();
+        const listPlayers = await playerModel.find();
 
-        return res.json(list);
+        return res.json(listPlayers);
     },
     get: async (req, res) => {
         const { id } = req.params;
@@ -20,7 +19,6 @@ export default {
         const player = new playerModel(req.body);
 
         await player.save();
-        // database.collection("golden-ball").create(player);
 
         return res.json(player);
     },
@@ -41,7 +39,6 @@ export default {
         const updatedPalyer = await playerModel.find({
           _id: player._id,
         });
-        // database.collection("golden-ball").update(player);
     
         return res.json(updatedPalyer);
       },
