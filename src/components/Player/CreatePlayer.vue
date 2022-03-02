@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import apiRequest from "../../utility/apiRequest";
+import apiRequest from "../../utility/apiRequest/";
 import StringInput from "../../Components/form/StringInput.vue";
 import NumberInput from "../../Components/form/NumberInput.vue";
 

@@ -5,10 +5,10 @@ const headers = {
   "Content-Type": "application/json",
 };
 
-const apiRequest = axios.create({
+const apiCaller = axios.create({
   baseURL: "http://localhost:4000/",
   timeout: 10 * 1000,
   headers,
 });
 
-export default apiRequest;
+export default apiCaller;

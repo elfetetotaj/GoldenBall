@@ -1,9 +1,9 @@
 import { getAuth } from "firebase/auth";
-import apiRequest from "../../apiRequest";
+import apiCaller from "../apiCaller";
 
 const createPlayer = async (playerBody) => {
   const token = await getAuth().currentUser.getIdToken();
-  const { data } = await apiRequest.post("player/create", playerBody, {
+  const { data } = await apiCaller.post("player/create", playerBody, {
     authorization: `Bearer ${token}`,
   });
 

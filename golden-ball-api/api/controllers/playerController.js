@@ -1,5 +1,6 @@
 import express from "express";
 import playerModel from "../models/playerModel";
+import updatedPlayerSchema from "../validator/playerValidation"
 
 
 
