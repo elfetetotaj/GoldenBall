@@ -2,7 +2,7 @@
     <ContactUs />
 </template>
 <script>
-import ContactUs from '@/Components/Contact/ContactUs.vue'
+import ContactUs from '@/components/Contact/ContactUs.vue'
 export default {
   components: {
     ContactUs

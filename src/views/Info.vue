@@ -7,10 +7,10 @@
     </div>
 </template>
 <script>
-import Merkato from '../Components/Content/Merkato.vue'
-import MerkatoNews from '../Components/Content/MerkatoNews.vue'
-import Merkato2 from '../Components/Content/Merkato2.vue'
-import Onlymerkato from '../Components/Content/Onlymerkato.vue'
+import Merkato from '@/components/Content/Merkato.vue'
+import MerkatoNews from '@/components/Content/MerkatoNews.vue'
+import Merkato2 from '@/components/Content/Merkato2.vue'
+import Onlymerkato from '@/components/Content/Onlymerkato.vue'
 
 export default {
   components: { Merkato, MerkatoNews, Merkato2, Onlymerkato},

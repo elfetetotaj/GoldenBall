@@ -36,8 +36,8 @@
 
 <script>
 import apiRequest from "../../utility/apiRequest/";
-import StringInput from "../../Components/form/StringInput.vue";
-import NumberInput from "../../Components/form/NumberInput.vue";
+import StringInput from "@/components/form/StringInput.vue";
+import NumberInput from "@/components/form/NumberInput.vue";
 
 export default {
   components: {

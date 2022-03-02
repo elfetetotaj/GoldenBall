@@ -9,9 +9,9 @@ const Country = () => import('@/views/Country.vue');
 const About = () => import('@/views/About.vue');
 const Register = () => import('@/views/Register.vue');
 const Login = () => import ('@/views/Login.vue')
-const CreatePlayer = () => import ('./Components/Player/CreatePlayer');
-const EditPlayer = () => import ('./Components/Player/EditPlayer');
-const ListPlayer = () => import ('./Components/Player/ListPlayer');
+const CreatePlayer = () => import ('./components/Player/CreatePlayer');
+const EditPlayer = () => import ('./components/Player/EditPlayer');
+const ListPlayer = () => import ('./components/Player/ListPlayer');
 
 Vue.use(Router)
 

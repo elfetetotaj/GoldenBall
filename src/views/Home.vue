@@ -7,9 +7,9 @@
   </div>
 </template>
 <script>
-import Slider from "@/Components/HomePage/Slider.vue";
-import News from "@/Components/HomePage/News.vue";
-import Calander from "@/Components/HomePage/Calander.vue";
+import Slider from "@/components/HomePage/Slider.vue";
+import News from "@/components/HomePage/News.vue";
+import Calander from "@/components/HomePage/Calander.vue";
 import {mapGetters} from 'vuex';
 
 export default {

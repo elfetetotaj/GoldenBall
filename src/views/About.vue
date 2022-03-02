@@ -7,9 +7,9 @@
 </template>
 <script>
 
-import AboutUs from '../Components/About/AboutUs.vue'
-import AboutJob from '../Components/About/AboutJob.vue'
-import Team from '../Components/About/Team.vue'
+import AboutUs from '@/components/About/AboutUs.vue'
+import AboutJob from '@/components/About/AboutJob.vue'
+import Team from '@/components/About/Team.vue'
 
 export default {
   components: {AboutUs, AboutJob, Team},

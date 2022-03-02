@@ -6,7 +6,7 @@
 <script>
 
 
-import CountryTable from '../Components/Country/CountryTable.vue'
+import CountryTable from '@/components/Country/CountryTable.vue'
 
 export default {
   components: {CountryTable},

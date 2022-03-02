@@ -7,8 +7,8 @@
 <script>
 
 
-import LeagueTable from '../Components/Table/LeagueTable.vue'
-import LeagueTable2 from '../Components/Table/LeagueTable2.vue'
+import LeagueTable from '@/components/Table/LeagueTable.vue'
+import LeagueTable2 from '@/components/Table/LeagueTable2.vue'
 
 export default {
   components: {LeagueTable, LeagueTable2},
