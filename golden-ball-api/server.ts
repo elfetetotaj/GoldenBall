@@ -34,7 +34,7 @@ app.use(getAuthToken);
 // app.use(checkIfAuthenticated);
 
 app.use("/users", usersRouter);
-app.use("player", playerRouter);
+app.use("/player", playerRouter);
 
 app.listen(port, () => {
   console.log(`Golden ball api running on port ${port}`);

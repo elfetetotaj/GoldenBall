@@ -11,7 +11,7 @@
           </p>
           <p class="small text-muted mb-0">
             &copy; Copyrights. All rights reserved.
-            <a class="text-primary" href="#">Bootstrapious.com</a>
+            <a class="text-primary" href="/">GoldenBall</a>
           </p>
         </div>
         <div class="col-lg-2 col-md-6">

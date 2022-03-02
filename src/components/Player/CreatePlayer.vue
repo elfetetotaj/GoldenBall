@@ -2,6 +2,11 @@
   <section>
     <div class="row justify-content-center">
       <div class="col-8 col-md-6 col-lg-5">
+        <br>
+        <h2>Create Player</h2>
+        <br>
+        <br>
+        <br>
         <form @submit.prevent="createPlayer">
           <div class="form-group">
             <StringInput v-model="form.name" placeholder="Name" />
@@ -19,7 +24,7 @@
           <div class="form-group">
             <NumberInput v-model="form.price" placeholder="Price"/>
           </div>
-
+<br>
           <div class="form-group">
             <button class="btn btn-primary" type="submit">Publish</button>
           </div>
