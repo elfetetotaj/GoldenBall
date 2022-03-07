@@ -25,12 +25,12 @@ export default {
   props: {
     player: Object,
   },
-//   computed: {
-//     src() {
-//       const filename = this.realEstate.files?.split(";")[0];
+  computed: {
+    src() {
+      const filename = this.player.files?.split(";")[0];
 
-//       return filename ? `http://localhost:4000/static/${filename}` : null;
-//     },
-//   },
+      return filename ? `http://localhost:4000/static/${filename}` : null;
+    },
+  },
 };
 </script>
