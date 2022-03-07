@@ -32,7 +32,6 @@ export default {
         const filenames = fs.readdirSync(dbDirname, "utf-8");
 
         const ids = filenames.map((filename) => {
-          // 1.json 2.json 3.json
           const idAsStr = filename.replace(".json", "");
 
           return parseInt(idAsStr, 10);
@@ -42,16 +41,10 @@ export default {
 
         const newPlayer = { ...player, id: nextId };
 
-        fs.writeFileSync(
-          `${dbDirname}/${nextId}`,
-          JSON.stringify(newPlayer)
-        );
+        fs.writeFileSync(`${dbDirname}/${nextId}`, JSON.stringify(newPlayer));
         return newPlayer;
       },
       update: (updatedPalyer) => {
-        // old version realEstate
-        // new version updatedRealEstate
-
         const oldVersionFilename = `${updatedPlayer.id}.json`;
 
         const filepath = dbDirname + oldVersionFilename;
