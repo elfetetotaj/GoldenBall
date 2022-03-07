@@ -69,6 +69,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "playerList" */ "./views/Players/PlayerList.vue"),
   },
+  {
+    path: "/adminPanel",
+    name: "AdminPanel",
+    component: () =>
+      import(/* webpackChunkName: "playerList" */ "./views/AdminPanel.vue"),
+  },
 ];
 
 const router = new VueRouter({

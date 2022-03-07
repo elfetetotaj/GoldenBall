@@ -46,15 +46,10 @@ export default {
       .catch((e) => {
         this.errors.push(e);
       });
-
-    // this.vueshopList = await apiRequest.getVueShopList();
-    // this.fetchVueshop();
   },
   methods: {
     async fetchPlayer() {
       this.playerList = await apiRequest.getPlayerList();
-      //   const result = await apiRequest.getVueshopList();
-      //   this.$store.dispatch("fetchVueshops", result);
     },
   },
   data() {

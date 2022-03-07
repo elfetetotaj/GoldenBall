@@ -5,6 +5,7 @@
         <!-- <img src="https://png.icons8.com/windows/32/000000/menu.png" data-toggle="dropdown" data-target="#navd" aria-haspopup="true" aria-expanded="false"> -->
         <div class="dropdown-menu hb" aria-labelledby="navd">
           <router-link class="dropdown-item" to="/">Home</router-link>
+          <router-link class="dropdown-item" to="/adminPanel">Administration</router-link>
           <router-link class="dropdown-item" to="/info">Merkato</router-link>
           <router-link class="dropdown-item" to="/table">Tables</router-link>
           <router-link class="dropdown-item" to="/country">Country</router-link>
@@ -23,6 +24,7 @@
       <!--Header navigation-->
       <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
         <router-link class="pl-5" to="/">Home</router-link>
+        <router-link class="pl-5" to="/adminPanel">Administration</router-link>
         <router-link class="pl-5" to="/info">Merkato</router-link>
         <router-link class="pl-5" to="/table">Tables</router-link>
         <router-link class="pl-5" to="/country">Country</router-link>
