@@ -19,6 +19,15 @@ const userController = {
         password,
       });
 
+      admin.auth().setCustomUserClaims(user.uid, { admin: true });
+
+      db.collection("roles")
+        .doc(user.uid)
+        .set({
+          email: user.email,
+          role: { admin: true },
+        });
+
       if (user.email && user.email.includes("ubt-uni.net")) {
         setUserRole(user, { admin: true });
       }

@@ -1,77 +1,114 @@
 <template>
-  <div class="container-flex">
-    <nav class="navbar navbar" style="background-color: white">
-      <div class="dropdown d-xl-none d-lg-none mr-auto">
-        <!-- <img src="https://png.icons8.com/windows/32/000000/menu.png" data-toggle="dropdown" data-target="#navd" aria-haspopup="true" aria-expanded="false"> -->
-        <div class="dropdown-menu hb" aria-labelledby="navd">
-          <router-link class="dropdown-item" to="/">Home</router-link>
-          <router-link class="dropdown-item" to="/adminPanel">Administration</router-link>
-          <router-link class="dropdown-item" to="/info">Merkato</router-link>
-          <router-link class="dropdown-item" to="/table">Tables</router-link>
-          <router-link class="dropdown-item" to="/country">Country</router-link>
-          <router-link class="dropdown-item" to="/contact">Contact</router-link>
-          <router-link class="dropdown-item" to="/about">About</router-link>
-          <router-link class="dropdown-item" to="/register">Register</router-link>
-          <router-link class="dropdown-item" to="/login">Login</router-link>
-          <router-link class="dropdown-item" to="/createPlayer">CreatePlayer</router-link>
-          <router-link class="dropdown-item" to="/playerList">PlayerList</router-link>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <router-link class="nav-link" :to="{ name: 'Home' }"
+        ><a class="navbar-brand"
+          ><img
+            src="@/assets/logo.png"
+            class="d-inline-block align-center"
+            style="width: 40px"
+          />
+          GoldenBall</a
+        ></router-link
+      >
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <li class="nav-item mr-2">
+            <router-link class="nav-link" :to="{ name: 'Info' }"
+              >Merkato</router-link
+            >
+          </li>
+          <li class="nav-item mr-2">
+            <router-link class="nav-link" :to="{ name: 'Table' }"
+              >Tables</router-link
+            >
+          </li>
+          <li class="nav-item mr-2">
+            <router-link class="nav-link" :to="{ name: 'Country' }"
+              >Counties</router-link
+            >
+          </li>
+          <li class="nav-item mr-2">
+            <router-link class="nav-link" :to="{ name: 'Contact' }"
+              >Contact</router-link
+            >
+          </li>
+          <li class="nav-item mr-2">
+            <router-link class="nav-link" :to="{ name: 'About' }"
+              >About</router-link
+            >
+          </li>
+          <li
+            class="nav-item"
+            v-if="
+              this.$store.state.user.claims &&
+              this.$store.state.user.claims.admin
+            "
+          >
+            <router-link class="nav-link" :to="{ name: 'AdminPanel' }"
+              >Administration</router-link
+            >
+          </li>
+        </div>
+        <div class="navbar-nav navbar-right">
+          <ul class="navbar-nav mr-auto"></ul>
+          <ul class="navbar-nav ml-auto">
+            <template v-if="user.data && user.data.email">
+              <div class="nav-item">
+                <li id="loggedin" class="nav-link">
+                  Hello {{ user.data.email }}
+                </li>
+              </div>
+              <div class="nav-item">
+                <li id="loggedin" class="nav-link" @click="handleLogout">
+                  Logout
+                </li>
+              </div>
+            </template>
+            <template v-else>
+              <li class="nav-item">
+                <router-link :to="{ name: 'Login' }" class="nav-link"
+                  >Login</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link :to="{ name: 'Register' }" class="nav-link"
+                  >Register</router-link
+                >
+              </li>
+            </template>
+          </ul>
         </div>
       </div>
-      <!--Logo-->
-      <a class="navbar-brand py-0 pl-5">
-        <img src="@/assets/logo.png" width="50" height="50" />
-      </a>
-      <!--Header navigation-->
-      <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
-        <router-link class="pl-5" to="/">Home</router-link>
-        <router-link class="pl-5" to="/adminPanel">Administration</router-link>
-        <router-link class="pl-5" to="/info">Merkato</router-link>
-        <router-link class="pl-5" to="/table">Tables</router-link>
-        <router-link class="pl-5" to="/country">Country</router-link>
-        <router-link class="pl-5" to="/contact">Contact</router-link>
-        <router-link class="pl-5" to="/about">About</router-link>
-        <router-link class="pl-5" to="/register">Register</router-link>
-        <router-link class="pl-5" to="/login">Login</router-link>
-        <router-link class="pl-5" to="/createPlayer">CreatePlayer</router-link>
-        <router-link class="pl-5" to="/playerList">PlayerList</router-link>
-      </span>
-    </nav>
-  </div>
+    </div>
+  </nav>
 </template>
-
 <script>
+import { getAuth, signOut } from "@firebase/auth";
+import { mapGetters } from "vuex";
 export default {
-  name: "Header",
+  computed: {
+    ...mapGetters({
+      user: "user",
+      claims: "claims",
+    }),
+  },
+  methods: {
+    async handleLogout() {
+      await signOut(getAuth());
+    },
+  },
 };
 </script>
-
 <style scoped>
-nav {
-  z-index: 100;
-}
 .navbar {
-  border-bottom: 1px solid #dcdcdc;
-  background-color: #f8f8f8;
+  margin-bottom: 0px !important;
+  border: 0px !important;
 }
-
-.close {
-  position: relative;
-  bottom: 20px;
-  left: 10px;
-  font-size: 31px;
-  color: #000;
+#loggedin {
+  margin-top: 5px;
 }
-.navbar-item.bc a {
-  font-size: 17px;
-  text-decoration: none;
-  color: black;
-}
-
-.navbar-item.bc a:hover,
-.navbar-item.bc a:active {
-  color: #ffd700;
-}
-.btn-sm {
-  border-radius: 0;
+.navbar-brand {
+  padding: 5px 15px !important;
 }
 </style>

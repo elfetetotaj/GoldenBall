@@ -1,4 +1,5 @@
 import Vue from "vue";
+import '@babel/polyfill'
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
@@ -10,8 +11,6 @@ import './plugins/bootstrap-vue'
 
 library.add(faUserSecret)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-
 Vue.config.productionTip = false
 Vue.config.devtools = true
 

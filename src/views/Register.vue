@@ -45,14 +45,11 @@ export default {
       error: null,
     };
   },
-  methods: {
+ methods: {
     async createUser() {
       try {
-        await apiRequest.post("/users/register", {
-          email: this.form.email,
-          password: this.form.password,
-        });
-        this.$router.replace({ name: "Listing" });
+        await apiRequest.registerUser(this.form.email, this.form.password);
+        this.$router.replace({ name: "Home" });
       } catch (err) {
         this.error = err.response.data.error;
       }
