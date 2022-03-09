@@ -69,20 +69,20 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "playerList" */ "./views/Players/PlayerList.vue"),
   },
-  // {
-  //   path: "/adminPanel",
-  //   name: "AdminPanel",
-  //   meta: {
-  //     isAdmin: true,
-  //   },
-  //   component: () =>
-  //     import(/* webpackChunkName: "playerList" */ "./views/AdminPanel.vue"),
-  // },
+  {
+    path: "/admin",
+    name: "Admin",
+    meta: {
+      isAdmin: true,
+    },
+    component: () =>
+      import(/* webpackChunkName: "admin" */ "./views/Admin.vue"),
+  },
   {
     path: "/createNews",
     name: "CreateNew",
     component: () =>
-      import(/* webpackChunkName: "playerList" */ "./views/News/CreateNew.vue"),
+      import(/* webpackChunkName: "createNews" */ "./views/News/CreateNew.vue"),
   },
 ];
 
@@ -94,14 +94,26 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   onAuthStateChanged(getAuth(), async (user) => {
-    if (to.matched.some((record) => record.meta.isAuthenticated && !user)) {
-      next("/");
-    } else if (to.matched.some((record) => record.meta.isAdmin)) {
-      const tokenResult = getAuth().currentUser.getIdTokenResult();
-      if (!tokenResult.claims.admin) {
-        next("/admin-panel");
+    const shouldBeLoggedIn = (record) =>
+      record.meta.isAuthenticated || record.meta.isAdmin;
+
+    if (to.matched.some((record) => shouldBeLoggedIn(record))) {
+      if (!user) {
+        next("/login");
       } else {
-        next();
+        const tokenResult = await getAuth().currentUser.getIdTokenResult();
+        const isAdmin = tokenResult.claims.admin;
+        if (isAdmin && to.matched.some((record) => !record.meta.isAdmin)) {
+          next("/admin");
+        } else if (to.matched.some((record) => record.meta.isAdmin)) {
+          if (!tokenResult.claims.admin) {
+            next("/");
+          } else {
+            next();
+          }
+        } else {
+          next();
+        }
       }
     } else {
       next();

@@ -45,7 +45,7 @@
               this.$store.state.user.claims.admin
             "
           >
-            <router-link class="nav-link" :to="{ name: 'AdminPanel' }"
+            <router-link class="nav-link" :to="{ name: 'Admin' }"
               >Administration</router-link
             >
           </li>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <router-view />
+    <router-view style="min-height: 100vh" />
     <Footer />
   </div>
 </template>

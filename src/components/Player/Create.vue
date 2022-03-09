@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import apiRequest from "../../utility/apiRequest/";
+import apiRequest from "../../utility/apiRequest";
 import StringInput from "@/components/form/StringInput.vue";
 import NumberInput from "@/components/form/NumberInput.vue";
 
@@ -50,8 +50,8 @@ export default {
         name: "",
         lastName: "",
         position: "",
-        goals: "",
-        price: "",
+        goals: 0,
+        price: 0,
       },
       error: null,
     };
@@ -59,7 +59,7 @@ export default {
   methods: {
     async createPlayer() {
       const newPlayer = await apiRequest.createPlayer({ ...this.form });
-      this.$router.push({ name: "Players", params: { id: newPlayer._id } });
+      this.$router.push({ name: "PlayerList", params: { id: newPlayer._id } });
     },
   },
 };
