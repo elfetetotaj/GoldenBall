@@ -64,6 +64,12 @@ const routes = [
       import(/* webpackChunkName: "createPlayer" */ "./views/Players/CreatePlayer.vue"),
   },
   {
+    path: "/updatePlayer",
+    name: "UpdatePlayer",
+    component: () =>
+      import(/* webpackChunkName: "updatePlayer" */ "./views/Players/UpdatePlayer.vue"),
+  },
+  {
     path: "/playerList",
     name: "PlayerList",
     component: () =>
