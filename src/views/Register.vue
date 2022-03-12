@@ -43,7 +43,7 @@
         </form>
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-<img src="@/assets/registerlogo.png" class="img-fluid"
+      <img src="@/assets/registerlogo.png" class="img-fluid"
           alt="Sample image" style="height:320px">
       </div>
     </div>

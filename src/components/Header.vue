@@ -1,99 +1,97 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <!-- <router-link  :to="{ name: 'Home' }"
-        ><a class="navbar-brand"
-          ><img
-            src="@/assets/logo.png"
-            class="d-inline-block align-center"
-            style="width: 40px"
-          />
-          GoldenBall</a
-        ></router-link
-      > -->
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <li class="nav-item mr-2">
-            <router-link class="nav-link" :to="{ name: 'Info' }"
-              >Merkato</router-link
-            >
-          </li>
-          <li class="nav-item mr-2">
-            <router-link class="nav-link" :to="{ name: 'Table' }"
-              >Tables</router-link
-            >
-          </li>
-          <li class="nav-item mr-2">
-            <router-link class="nav-link" :to="{ name: 'Country' }"
-              >Counties</router-link
-            >
-          </li>
-          <li class="nav-item mr-2">
-            <router-link class="nav-link" :to="{ name: 'Contact' }"
-              >Contact</router-link
-            >
-          </li>
-          <li class="nav-item mr-2">
-            <router-link class="nav-link" :to="{ name: 'About' }"
-              >About</router-link
-            >
-          </li>
-          <li
-            class="nav-item"
-            v-if="
-              this.$store.state.user.claims &&
-              this.$store.state.user.claims.admin
-            "
-          >
-            <router-link class="nav-link" :to="{ name: 'Admin' }"
-              >Administration</router-link
-            >
-          </li>
-          <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Players
-      </a>
-      <div class="dropdown-menu">
-        <router-link :to="{ name: 'PlayerList' }" class="dropdown-item" href="#">PlayerList</router-link>
-        <router-link :to="{ name: 'CreatePlayer' }" class="dropdown-item" href="#">CreatePlayer</router-link>
-      </div>
-    </li>
-        </div>
-        <div class="navbar-nav navbar-right">
-          <ul class="navbar-nav mr-auto"></ul>
+  <!-- Navigation -->
+  <div
+    
+  >
+    <header class="topbar">
+      <div class="container"></div>
+    </header>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark mx-background-top-linear"
+      style="background: linear-gradient(45deg, #ff0000 48%, #1b1e21 48%);margin-bottom: 0px;
+element.style {
+    background: linear-gradient(45deg, rgb(255, 0, 0) 48%, rgb(27, 30, 33) 48%);
+    margin-bottom: 0px;
+    border-radius: 0px;"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarResponsive"
+          style="font-size:font-size: 16px;"
+        >
           <ul class="navbar-nav ml-auto">
-            <template v-if="user.data && user.data.email">
-              <div class="nav-item">
-                <li id="loggedin" class="nav-link">
-                  Hello {{ user.data.email }}
-                </li>
-              </div>
-              <div class="nav-item">
-                <li id="loggedin" class="nav-link" @click="handleLogout">
-                  Logout
-                </li>
-              </div>
-            </template>
-            <template v-else>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Login' }" class="nav-link"
-                  >Login</router-link
-                >
-              </li>
-              <li class="nav-item">
-                <router-link :to="{ name: 'Register' }" class="nav-link"
-                  >Register</router-link
-                >
-              </li>
-            </template>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-              <i class="fa fa-bars"></i>
-            </a>
+            <router-link :to="{ name: 'Home' }" style="color: white"
+              ><a class="navbar-brand"
+                ><img
+                  src="@/assets/logo.png"
+                  class="d-inline-block align-center"
+                  style="width: 40px"
+                />
+                Golden Ball</a
+              ></router-link
+            >
+
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'Info' }"
+                style="color: white"
+                >Merkato</router-link
+              >
+            </li>
+
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'Table' }"
+                style="color: white"
+                >Tables</router-link
+              >
+            </li>
+
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'Country' }"
+                style="color: white"
+                >Counties</router-link
+              >
+            </li>
+
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'Contact' }"
+                style="color: white"
+                >Contact</router-link
+              >
+            </li>
+
+            <li class="nav-item">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'About' }"
+                style="color: white"
+                >About</router-link
+              >
+            </li>
           </ul>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 <script>
 import { getAuth, signOut } from "@firebase/auth";
@@ -115,67 +113,173 @@ export default {
 <style scoped>
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-.navbar {
-  margin-bottom: 0px !important;
-  border: 0px !important;
-}
-#loggedin {
-  margin-top: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #f7f7f7;
 }
 .navbar-brand {
   padding: 5px 15px !important;
+}
+.navbar {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+/*
+headeer top
+*/
+.topbar {
+  background-color: #212529;
+  padding: 0;
+}
+
+.topbar .container .row {
+  margin: -7px;
+  padding: 0;
+}
+
+.topbar .container .row .col-md-12 {
+  padding: 0;
+}
+
+.topbar p {
+  margin: 0;
+  display: inline-block;
+  font-size: 13px;
+  color: #f1f6ff;
+}
+
+.topbar p > i {
+  margin-right: 5px;
+}
+.topbar p:last-child {
+  text-align: right;
+}
+
+header .navbar {
+  margin-bottom: 0;
+}
+
+.topbar li.topbar {
+  display: inline;
+  padding-right: 18px;
+  line-height: 52px;
+  transition: all 0.3s linear;
+}
+
+.topbar li.topbar:hover {
+  color: #1bbde8;
+}
+
+.topbar ul.info i {
+  color: #131313;
+  font-style: normal;
+  margin-right: 8px;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+.topbar ul.info li {
+  float: right;
+  padding-left: 30px;
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 44px;
+}
+
+.topbar ul.info i span {
+  color: #aaa;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 50px;
+  padding-left: 18px;
+}
+
+ul.social-network {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.social-network li {
+  border: none;
+  margin: 0;
+}
+
+ul.social-network li i {
+  margin: 0;
+}
+
+ul.social-network li {
+  display: inline;
+  margin: 0 5px;
+  border: 0px solid #2d2d2d;
+  padding: 5px 0 0;
+  width: 32px;
+  display: inline-block;
+  text-align: center;
+  height: 32px;
+  vertical-align: baseline;
+  color: #000;
+}
+
+ul.social-network {
+  list-style: none;
+  margin: 5px 0 10px -25px;
+  float: right;
+}
+
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  will-change: opacity, transform;
+  transition: 0.3s ease-out;
+  color: #fff;
+}
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+.bg-image-full {
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.mx-background-top-linear {
+  background: -webkit-linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
+  background: -webkit-linear-gradient(left, #54d400 48%, #1b1e21 48%);
+  background: linear-gradient(45deg, #54d400 48%, #1b1e21 48%);
 }
 </style>
