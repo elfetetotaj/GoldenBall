@@ -28,11 +28,15 @@ export default {
 </script>
 
 <style scoped>
-.carousel-inner{
-  height: 600px !important; 
+@media screen and (min-width: 769px) {
+  
+.img-fluid[data-v-638b41bc] {
+    min-width: 800px !important;
+}
 }
 .img-fluid {
-  min-width: 800px !important;
+    max-width: 100%;
+    height: auto;
 }
 
 ol.carousel-indicators li {
