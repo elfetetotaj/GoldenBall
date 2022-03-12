@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <router-link class="nav-link" :to="{ name: 'Home' }"
+      <!-- <router-link  :to="{ name: 'Home' }"
         ><a class="navbar-brand"
           ><img
             src="@/assets/logo.png"
@@ -10,7 +10,7 @@
           />
           GoldenBall</a
         ></router-link
-      >
+      > -->
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
           <li class="nav-item mr-2">
@@ -86,6 +86,9 @@
                 >
               </li>
             </template>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
           </ul>
         </div>
       </div>
@@ -110,6 +113,61 @@ export default {
 };
 </script>
 <style scoped>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 .navbar {
   margin-bottom: 0px !important;
   border: 0px !important;
