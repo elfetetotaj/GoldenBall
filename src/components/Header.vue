@@ -49,6 +49,15 @@
               >Administration</router-link
             >
           </li>
+          <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Players
+      </a>
+      <div class="dropdown-menu">
+        <router-link :to="{ name: 'PlayerList' }" class="dropdown-item" href="#">PlayerList</router-link>
+        <router-link :to="{ name: 'CreatePlayer' }" class="dropdown-item" href="#">CreatePlayer</router-link>
+      </div>
+    </li>
         </div>
         <div class="navbar-nav navbar-right">
           <ul class="navbar-nav mr-auto"></ul>

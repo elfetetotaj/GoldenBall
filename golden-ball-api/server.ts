@@ -7,6 +7,7 @@ import cors from "cors";
 import helmet from "helmet";
 import playerRouter from "./api/routes/playerRoute";
 import newsRouter from "./api/routes/newsRoute";
+import logsRouter from "./api/routes/logsRoute";
 
 mongoose.connect("mongodb://localhost:27017/goldenBall").then(() => {
   console.log("Connected to mongodb port 27017");
@@ -36,6 +37,7 @@ mongoose.connect("mongodb://localhost:27017/goldenBall").then(() => {
   app.use("/users", usersRouter);
   app.use("/player", playerRouter);
   app.use("/news", newsRouter);
+  app.use("/logs", logsRouter);
 
   app.listen(port, () => {
     console.log(`Golden ball api running on port ${port}`);
