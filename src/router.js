@@ -1,16 +1,14 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 
-Vue.use(VueRouter)
-
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: () =>
-      import(/* webpackChunkName: "Home" */ "./views/Home.vue"),
+    component: () => import(/* webpackChunkName: "Home" */ "./views/Home.vue"),
   },
   {
     path: "/contact",
@@ -36,8 +34,7 @@ const routes = [
   {
     path: "/info",
     name: "Info",
-    component: () =>
-      import(/* webpackChunkName: "info" */ "./views/Info.vue"),
+    component: () => import(/* webpackChunkName: "info" */ "./views/Info.vue"),
   },
   {
     path: "/about",
@@ -61,19 +58,25 @@ const routes = [
     path: "/createPlayer",
     name: "CreatePlayer",
     component: () =>
-      import(/* webpackChunkName: "createPlayer" */ "./views/Players/CreatePlayer.vue"),
+      import(
+        /* webpackChunkName: "createPlayer" */ "./views/Players/CreatePlayer.vue"
+      ),
   },
   {
     path: "/updatePlayer",
     name: "UpdatePlayer",
     component: () =>
-      import(/* webpackChunkName: "updatePlayer" */ "./views/Players/UpdatePlayer.vue"),
+      import(
+        /* webpackChunkName: "updatePlayer" */ "./views/Players/UpdatePlayer.vue"
+      ),
   },
   {
     path: "/playerList",
     name: "PlayerList",
     component: () =>
-      import(/* webpackChunkName: "playerList" */ "./views/Players/PlayerList.vue"),
+      import(
+        /* webpackChunkName: "playerList" */ "./views/Players/PlayerList.vue"
+      ),
   },
   {
     path: "/admin",
@@ -89,6 +92,18 @@ const routes = [
     name: "CreateNew",
     component: () =>
       import(/* webpackChunkName: "createNews" */ "./views/News/CreateNew.vue"),
+  },
+  {
+    path: "/newsList",
+    name: "NewsList",
+    component: () =>
+      import(/* webpackChunkName: "newsList" */ "./views/News/NewsList.vue"),
+  },
+  {
+    path: "/contactList",
+    name: "ContactList",
+    component: () =>
+      import(/* webpackChunkName: "contactList" */ "./views/ContactList.vue"),
   },
 ];
 
