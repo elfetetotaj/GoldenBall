@@ -91,17 +91,19 @@ element.style {
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
           </a>
-          li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Link
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li> <router-link
+                class="nav-link"
+                :to="{ name: 'Contact' }"
+                style="color: white"
+                >Contact</router-link
+              ></li>
             <li><a class="dropdown-item" href="#">Another action</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
         </li>
+          </ul>
         </div>
         <div class="navbar-nav navbar-right">
           <ul class="navbar-nav mr-auto"></ul>
