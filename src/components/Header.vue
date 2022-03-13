@@ -1,13 +1,11 @@
 <template>
   <!-- Navigation -->
-  <div
-    
-  >
+  <div>
     <header class="topbar">
       <div class="container"></div>
     </header>
     <nav
-      class="navbar navbar-expand-lg navbar-dark mx-background-top-linear"
+      class="navbar navbar-expand-lg navbar-nav mr-auto navbar-dark mx-background-top-linear"
       style="background: linear-gradient(45deg, #ff0000 48%, #1b1e21 48%);margin-bottom: 0px;
 element.style {
     background: linear-gradient(45deg, rgb(255, 0, 0) 48%, rgb(27, 30, 33) 48%);
@@ -29,7 +27,8 @@ element.style {
         <div
           class="collapse navbar-collapse"
           id="navbarResponsive"
-          style="font-size:font-size: 16px;"
+          style="font-size:font-size: 16px;position: inherit;
+          margin-right: 350px !important;"
         >
           <ul class="navbar-nav ml-auto">
             <router-link :to="{ name: 'Home' }" style="color: white"
@@ -87,6 +86,50 @@ element.style {
                 >About</router-link
               >
             </li>
+
+             <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Link
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        </div>
+        <div class="navbar-nav navbar-right">
+          <ul class="navbar-nav mr-auto"></ul>
+          <ul class="navbar-nav ml-auto">
+            <template v-if="user.data && user.data.email">
+              <div class="nav-item">
+                <li id="loggedin" class="nav-link">
+                  Hi! {{ user.data.email }}
+                </li>
+              </div>
+              <div class="nav-item">
+                <li id="loggedin" class="nav-link" @click="handleLogout">
+                  Logout
+                </li>
+              </div>
+            </template>
+            <template v-else>
+              <li class="nav-item">
+                <router-link :to="{ name: 'Login' }" class="nav-link"
+                  >Login</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link :to="{ name: 'Register' }" class="nav-link"
+                  >Register</router-link
+                >
+              </li>
+            </template>
           </ul>
         </div>
       </div>
@@ -120,6 +163,10 @@ body {
   line-height: 1.5;
   color: #212529;
   background-color: #f7f7f7;
+}
+
+.nav-item{
+      margin-top: 4px;
 }
 .navbar-brand {
   padding: 5px 15px !important;
