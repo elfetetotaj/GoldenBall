@@ -28,13 +28,13 @@ export default {
     VueDropzone,
   },
   props: {
-    vueshopId: String,
+    playerId: String,
     initialFiles: String,
   },
   data() {
     return {
       dropzoneOptions: {
-        url: `http://localhost:4000/vueshop/${this.vueshopId}/uploadFile`,
+        url: `http://localhost:4000/player/${this.playerId}/uploadFile`,
         method: "put",
         thumbnailWidth: 300,
         maxFilesize: 2,

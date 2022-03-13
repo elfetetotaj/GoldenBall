@@ -6,9 +6,10 @@ const playerRoute = express.Router();
 // playerRoute.use(checkIfAuthenticated);
 
 playerRoute.get("/list", playerController.list);
-playerRoute.get(":id", playerController.get);
+playerRoute.get("/:id", playerController.get);
 playerRoute.post("/create", playerController.post);
 playerRoute.put("/update", playerController.put);
+playerRoute.delete("/:id", playerController.delete);
 playerRoute.put("/:id/uploadFile", playerController.uploadFile);
 playerRoute.put(
     "/:playerId/removeFile/:filename",

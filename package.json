@@ -21,9 +21,12 @@
     "font-awesome": "^4.0.3",
     "intersection-observer": "^0.12.0",
     "jquery": "^3.2.1",
+    "sweetalert2": "^11.4.4",
     "vue": "^2.6.14",
+    "vue-firestore": "^0.3.30",
     "vue-router": "^3.5.3",
     "vue2-dropzone": "^3.6.0",
+    "vue2-filters": "^0.14.0",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

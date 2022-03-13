@@ -4,13 +4,12 @@ const PlayerSchema = mongoose.Schema(
   {
     name: String,
     lastName: String,
-    birthday: Date,
     position: String,
     goals: Number,
-    price: Number,
+    price: String,
+    team: String,
     Photo: String,
-  }
-  // {typeKey: "$type"}
+  },
 );
 const model = mongoose.model("player", PlayerSchema);
 

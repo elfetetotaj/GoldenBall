@@ -63,7 +63,7 @@ const routes = [
       ),
   },
   {
-    path: "/updatePlayer",
+    path: "/updatePlayer/:id",
     name: "UpdatePlayer",
     component: () =>
       import(
