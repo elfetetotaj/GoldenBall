@@ -10,15 +10,15 @@
           <h2 style="color:grey">got a thought to discuss?</h2>
           <form style="text-align: -webkit-left;" @submit.prevent="createContact">
             <div class="form-group">
-              <input v-model="form.name" type="text" class="form-control" style="color:black; text-indent: 110px;" required>
+              <input v-model="form.name" type="text" class="form-control" style="color:black; text-indent: 120px;" required>
               <label class="label" for="name" style="color:white"><b>Name</b></label>
             </div>
             <div class="form-group">
-              <input v-model="form.email" type="email" class="form-control" style="color:black; text-indent: 110px;" required>
+              <input v-model="form.email" type="email" class="form-control" style="color:black; text-indent: 120px;" required>
               <label class="label" for="E-mail" style="color:white"><b>E-mail</b></label>
             </div>
             <div class="form-group">
-              <textarea v-model="form.message" class="form-control" id="texting" style="overflow:hidden; height:130px; color:black;"  required></textarea>
+              <textarea v-model="form.message" class="form-control" id="texting" style="overflow:hidden; text-indent: 120px; height:130px; color:black;"  required></textarea>
               <label class="label" for="Message" style="color:white"><b>Message</b></label>
             </div>
               <button type="submit" class="btn btn-light" href="#" style="background-color:black; color:white" role="button">Submit</button>
