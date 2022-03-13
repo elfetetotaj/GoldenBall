@@ -7,7 +7,9 @@ import createNews from "./new/createNews";
 import newsList from "./new/getNewsList"
 import createContact from "./contact/createContact";
 import getContact from "./contact/getContact";
-import getFilesDetails from "./player//getFilesDetails";
+import getFilesDetails from "./player/getFilesDetails";
+import createLog from "./log/createLog";
+import getLogsList from "./log/getLogList";
 
 export default {
     registerUser,
@@ -20,4 +22,6 @@ export default {
     createContact,
     getContact,
     getFilesDetails,
+    createLog,
+    getLogsList,
 }
