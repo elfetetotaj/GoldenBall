@@ -86,14 +86,6 @@ element.style {
                 >About</router-link
               >
             </li>
-            <li>
-              <b-nav-item-dropdown id="dropdown-dropright" dropright text="Administration" right>
-                <b-dropdown-item><router-link :to="{name: 'PlayerList'}">Players</router-link></b-dropdown-item>
-                <b-dropdown-item><router-link :to="{name: 'NewsList'}">News</router-link></b-dropdown-item>
-                <b-dropdown-item><router-link :to="{name: 'ContactList'}">Contact</router-link></b-dropdown-item>
-                <b-dropdown-item><router-link :to="{name: 'PlayerList'}">Players</router-link></b-dropdown-item>
-              </b-nav-item-dropdown>
-            </li>
           </ul>
         <div class="navbar-nav navbar-right navbar-collapse">
           <ul class="navbar-nav mr-auto"></ul>

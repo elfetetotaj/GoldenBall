@@ -1,5 +1,68 @@
 <template>
-    <div>
-        <h2>Hello from Admin</h2>
-    </div>
+  <div class="sidebar">
+    <a href="#submenu1">Administration</a>
+    <ul id="submenu1" class="list-unstyled collapse show">
+      <li><b-link :to="{ name: 'PlayerList' }">Players</b-link></li>
+      <li><b-link :to="{ name: 'NewsList' }">News</b-link></li>
+      <li><b-link :to="{ name: 'contactList' }">Contact </b-link></li>
+    </ul>
+  </div>
 </template>
+<script>
+
+</script>
+<style scoped>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+  height: 100%;
+  overflow: auto;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
