@@ -2,7 +2,7 @@ import apiCaller from "../apiCaller";
 import { getAuth } from "firebase/auth";
 
 const getNewsList = async () => {
-  const token = await getAuth().currentUser.getIdToken();
+  const token = await getAuth().currentUser.getIdTokenResult();
   const result = await apiCaller.get("news/list", {
     headers: {
       authorization: `Bearer ${token}`,

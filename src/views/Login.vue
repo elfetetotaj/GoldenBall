@@ -21,7 +21,7 @@
 
           <!-- Password input -->
           <div class="form-outline mb-3">
-            <input type="password" required v-model="form.password" id="form3Example4" minlength="8" class="form-control form-control-lg"
+            <input type="password" required v-model="form.password" id="form3Example4" minlength="6" class="form-control form-control-lg"
               placeholder="Enter password" />
             <!-- <label class="form-label" for="form3Example4">Password</label> -->
           </div>

@@ -1,29 +1,29 @@
 <template>
   <div class="container">
-    <h2>News list</h2>
-
+    <br />
+    <div class="row">
+      <h2>News list</h2>
+      <div class="btn-group">
+        <a
+          type="button"
+          href="http://localhost:8079/createNews"
+          class="btn btn-primary text-right"
+          >Add</a
+        >
+      </div>
+    </div>
     <div class="table-responsive">
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>#</th>
             <th>Title</th>
             <th>Description</th>
-            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="field in fields" :key="field">
-            <th scope="row">1</th>
             <td>{{ field.title }}</td>
             <td>{{ field.description }}</td>
-            <td>
-              <div class="btn-group">
-                <a type="button" href="http://localhost:8079/createPlayer" class="btn btn-primary">Add</a>
-                <a class="btn btn-success">Edit</a>
-                <a class="btn btn-danger"> Delete </a>
-              </div>
-            </td>
           </tr>
         </tbody>
       </table>

@@ -2,6 +2,7 @@ import admin from "../services/firebase";
 import setUserRole from "../utility/setUserRole";
 import registerUserSchema from "../validator/userValidation/registerUserSchema";
 
+const db = admin.firestore();
 const earlySupporters = ["et@gmail.com"];
 
 const userController = {

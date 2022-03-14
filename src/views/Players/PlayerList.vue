@@ -16,7 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="field in fields" :key="field">
+          <tr v-for="field in fields" :key="field._id">
             <th scope="row">1</th>
             <td>{{ field.name }}</td>
             <td>{{ field.lastName }}</td>
@@ -39,7 +39,7 @@
                 <button
                   type="button"
                   class="btn btn-danger ml-2"
-                  @click="deletePlayer"
+                  @click.prevent="deletePlayer(field._id)"
                 >
                   Delete
                 </button>
@@ -58,29 +58,23 @@ th {
 </style>
 <script>
 import apiRequest from "../../utility/apiRequest";
-import axios from "axios";
+import { mapGetters } from 'vuex';
 // import createPlayer from '../../utility/apiRequest/player/createPlayer';
 export default {
   props: {
     player: Object,
   },
   components: {},
-  created() {
-    axios
-      .get(`http://localhost:4000/player/list`)
-      .then((response) => {
-        this.fields = response.data;
-      })
-      .catch((e) => {
-        this.errors.push(e);
-      });
+  async created() {
+    const result = await apiRequest.playerList();
+      this.$store.dispatch("fetchPlayers", result);
   },
   methods: {
     // async fetchPlayer() {
     //   this.playerList = await apiRequest.getPlayerList();
     // },
-    async deletePlayer() {
-      await apiRequest.deletePlayer(this.player._id);
+    async deletePlayer(fieldId) {
+      await apiRequest.deletePlayer(fieldId);
 
       const result = await apiRequest.playerList();
       this.$store.dispatch("fetchPlayers", result);
@@ -88,10 +82,13 @@ export default {
   },
   data() {
     return {
-      fields: [],
     };
   },
   computed: {
+    ...mapGetters({
+      fields: "playersList",
+    }),
+        
     src() {
       const filename = this.player.files?.split(";")[0];
 

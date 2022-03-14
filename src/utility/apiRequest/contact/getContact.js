@@ -2,7 +2,7 @@ import apiCaller from "../apiCaller";
 import { getAuth } from "firebase/auth";
 
 const getContactList = async () => {
-  const token = await getAuth().currentUser.getIdToken();
+  const token = await getAuth().currentUser.getIdTokenResult();
   const result = await apiCaller.get("contact/get", {
     headers: {
       authorization: `Bearer ${token}`,
