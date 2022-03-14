@@ -28,7 +28,7 @@ element.style {
           class="collapse navbar-collapse"
           id="navbarResponsive"
           style="font-size:font-size: 16px;position: inherit;
-          margin-right: 350px !important;"
+          "
         >
           <ul class="navbar-nav ml-auto">
             <router-link :to="{ name: 'Home' }" style="color: white"
@@ -95,8 +95,7 @@ element.style {
               </b-nav-item-dropdown>
             </li>
           </ul>
-        </div>
-        <div class="navbar-nav navbar-right">
+        <div class="navbar-nav navbar-right navbar-collapse">
           <ul class="navbar-nav mr-auto"></ul>
           <ul class="navbar-nav ml-auto">
             <template v-if="user.data && user.data.email">
@@ -125,6 +124,7 @@ element.style {
             </template>
           </ul>
         </div>
+      </div>
       </div>
     </nav>
   </div>
