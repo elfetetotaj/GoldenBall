@@ -1,7 +1,14 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import store from "../store";
+// import { initializeApp } from "firebase/app";
+ import { getAuth, onAuthStateChanged } from "firebase/auth";
+// import { getFirestore } from 'firebase/firestore/lite';
+ import store from "../store";
+// import "firebase/compat/storage";
+// require("firebase/compat/firestore");
+import firebase from 'firebase/compat/app';
+require('firebase/compat/auth');
+require('firebase/compat/firestore');
+require ('firebase/compat/storage');
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,7 +25,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
+
+// Initialize Firebase
+const fb = firebase.initializeApp(firebaseConfig);
+
+const db = firebase.firestore();
+
+
 
 
 onAuthStateChanged(getAuth(), async (user) => {
@@ -28,3 +43,5 @@ onAuthStateChanged(getAuth(), async (user) => {
 
   store.dispatch("fetchUser", { user, claims: tokenResult.claims });
 });
+
+export { fb, db }

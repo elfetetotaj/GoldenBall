@@ -7,7 +7,7 @@
         <a
           type="button"
           href="http://localhost:8079/createNews"
-          class="btn btn-primary text-right"
+          class="btn btn-primary"
           >Add</a
         >
       </div>
@@ -55,7 +55,7 @@ export default {
   },
   methods: {
     async fetchews() {
-      this.newsList = await apiRequest.getNewsList();
+      this.newsList = await apiRequest.newsList();
     },
   },
   data() {

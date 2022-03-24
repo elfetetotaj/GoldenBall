@@ -5,6 +5,7 @@ import getAuthToken from "./api/middlewares/getAuthToken";
 import usersRouter from "./api/routes/usersRoute";
 import cors from "cors";
 import helmet from "helmet";
+import fileupload from "express-fileupload";
 import playerRouter from "./api/routes/playerRoute";
 import newsRouter from "./api/routes/newsRoute";
 import logsRouter from "./api/routes/logsRoute";
@@ -25,6 +26,8 @@ mongoose.connect("mongodb://localhost:27017/goldenBall").then(() => {
   );
 
   app.use("/static", express.static(`${__dirname}/public/files`));
+
+  app.use(fileupload());
 
   app.use(helmet());
 

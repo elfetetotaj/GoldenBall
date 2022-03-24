@@ -9,23 +9,23 @@
         <br />
         <form @submit.prevent="createPlayer">
           <div class="form-group">
-            <StringInput v-model="form.name" placeholder="Name" />
+            <StringInput v-model="form.name" placeholder="Name" type="text" minlength="3" required/>
           </div>
           <div class="form-group">
-            <StringInput v-model="form.lastName" placeholder="Last Name" />
+            <StringInput v-model="form.lastName" placeholder="Last Name" type="text" minlength="3" required/>
           </div>
           <div class="form-group">
-            <StringInput v-model="form.position" placeholder="Position" />
+            <StringInput v-model="form.position" placeholder="Position" type="text" minlength="3" required/>
           </div>
           <div class="form-group">
-            <NumberInput v-model="form.goals" placeholder="Goals" />
+            <NumberInput v-model="form.goals" placeholder="Goals" type="number" minlength="3" required/>
           </div>
 
           <div class="form-group">
-            <StringInput v-model="form.price" placeholder="Price" />
+            <StringInput v-model="form.price" placeholder="Price" type="text" required />
           </div>
           <div class="form-group">
-            <StringInput v-model="form.team" placeholder="Team" />
+            <StringInput v-model="form.team" placeholder="Team" type="text" minlength="3" required/>
           </div>
           <br />
           <div class="form-group">

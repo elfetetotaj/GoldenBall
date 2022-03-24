@@ -51,14 +51,14 @@ element.style {
               >
             </li>
 
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <router-link
                 class="nav-link"
                 :to="{ name: 'Table' }"
                 style="color: white"
                 >Tables</router-link
               >
-            </li>
+            </li> -->
 
             <li class="nav-item">
               <router-link
@@ -133,7 +133,13 @@ export default {
   },
   methods: {
     async handleLogout() {
-      await signOut(getAuth());
+      await signOut(getAuth())
+      .then(() => {
+        this.$router.replace("/");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
     },
   },
 };

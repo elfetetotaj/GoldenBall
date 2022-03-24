@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     async fetchPlayer() {
-      this.playerList = await apiRequest.getPlayerList();
+      this.playerList = await apiRequest.playerList();
     },
   },
   data() {

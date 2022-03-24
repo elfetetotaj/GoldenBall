@@ -1,8 +1,19 @@
 <template>
   <div class="xeko">
-    <div class="ptable" style="display:flex; background-color:black; border-top: 1px solid white">
+    <p v-for="fete in fetes" :key="fete.id">{{ fete.name}}</p>
+    <div
+      class="ptable"
+      style="
+        display: flex;
+        background-color: black;
+        border-top: 1px solid white;
+      "
+    >
+      
       <table>
-        <tr class="col"><th>Premier League</th></tr>
+        <tr class="col">
+          <th>Premier League</th>
+        </tr>
         <tr class="col">
           <th>#</th>
           <th>Team</th>
@@ -15,7 +26,7 @@
         </tr>
         <tr class="wpos">
           <td>1</td>
-          <td>Manchester City</td>
+          <td></td>
           <td>2</td>
           <td>2</td>
           <td>0</td>
@@ -125,7 +136,9 @@
         </tr>
       </table>
       <table>
-        <tr class="col"><th>LaLiga</th></tr>
+        <tr class="col">
+          <th>LaLiga</th>
+        </tr>
         <tr class="col">
           <th>#</th>
           <th>Team</th>
@@ -247,15 +260,72 @@
           <td>0</td>
         </tr>
       </table>
-      
     </div>
   </div>
 </template>
-
 <script>
+import firebase from "../../services/firebase";
+
 export default {
-  name: "Table",
+  data() {
+    return {
+      fetes: [],
+      fete: {
+        name: "",
+      },
+    };
+  },
+  methods: {
+    async getFetes() {
+      var fetesRef = await firebase.firestore
+        .collection("users")
+        .doc(firebase.auth().currentUser.uid)
+        .collection("fetes");
+
+      fetesRef.onSnapshot((snap) => {
+        this.fetes = [];
+        snap.forEach((doc) => {
+          var fete = doc.data();
+          fete.id = doc.id;
+          this.fetes.push(fete);
+        });
+      });
+    },
+    created() {
+      this.getFetes();
+    },
+  },
 };
+</script>
+//
+<script>
+// // import {db} from '@/services/firebase';
+// // import firebase from "firebase/compat/app";
+// // require("firebase/compat/firestore");
+// // const db = firebase.firestore();
+// import { collection, getDocs } from "firebase/compat/firestore";
+
+// export default {
+//   name: "LeagueTable",
+//   props: {
+//     msg: String,
+//   },
+//   data() {
+//     return {
+//       fete: [],
+//     };
+//   },
+
+//   firestore() {
+//     return {
+//       fete: db.collection("fete"),
+//     };
+//   },
+//   methods: {
+
+//   }
+// };
+//
 </script>
 
 <style scoped>

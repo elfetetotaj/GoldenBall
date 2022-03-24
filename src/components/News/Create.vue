@@ -9,7 +9,7 @@
         <br />
         <form @submit.prevent="createNews">
           <div class="form-group">
-            <StringInput v-model="form.title" placeholder="Title" />
+            <StringInput type="text" v-model="form.title" placeholder="Title" minlength="3" required/>
           </div>
           <div class="form-group">
             <textarea

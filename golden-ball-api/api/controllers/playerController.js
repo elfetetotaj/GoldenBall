@@ -1,6 +1,7 @@
 import express from "express";
 import playerModel from "../models/playerModel";
 import updatedPlayerSchema from "../validator/playerValidation/updatePlayerSchema.js";
+import FileService from "../services/FileService";
 
 export default {
   list: async (req, res) => {

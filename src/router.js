@@ -19,12 +19,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "contact" */ "./views/Contact.vue"),
   },
-  {
-    path: "/table",
-    name: "Table",
-    component: () =>
-      import(/* webpackChunkName: "table" */ "./views/Table.vue"),
-  },
+  // {
+  //   path: "/table",
+  //   name: "Table",
+  //   component: () =>
+  //     import(/* webpackChunkName: "table" */ "./views/Table.vue"),
+  // },
   {
     path: "/country",
     name: "Country",
@@ -57,6 +57,9 @@ const routes = [
   {
     path: "/createPlayer",
     name: "CreatePlayer",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(
         /* webpackChunkName: "createPlayer" */ "./views/Players/CreatePlayer.vue"
@@ -65,6 +68,9 @@ const routes = [
   {
     path: "/updatePlayer/:id",
     name: "UpdatePlayer",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(
         /* webpackChunkName: "updatePlayer" */ "./views/Players/UpdatePlayer.vue"
@@ -73,6 +79,9 @@ const routes = [
   {
     path: "/playerList",
     name: "PlayerList",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(
         /* webpackChunkName: "playerList" */ "./views/Players/PlayerList.vue"
@@ -90,20 +99,47 @@ const routes = [
   {
     path: "/createNews",
     name: "CreateNew",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(/* webpackChunkName: "createNews" */ "./views/News/CreateNew.vue"),
   },
   {
     path: "/newsList",
     name: "NewsList",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(/* webpackChunkName: "newsList" */ "./views/News/NewsList.vue"),
   },
   {
     path: "/contactList",
     name: "ContactList",
+    meta: {
+      isAdmin: true,
+    },
     component: () =>
       import(/* webpackChunkName: "contactList" */ "./views/ContactList.vue"),
+  },
+  {
+    path: "/jobsList",
+    name: "JobList",
+    meta: {
+      isAdmin: true,
+    },
+    component: () =>
+      import(/* webpackChunkName: "contactList" */ "./views/Jobs/JobList.vue"),
+  },
+  {
+    path: "/createJobs",
+    name: "CreateJob",
+    meta: {
+      isAdmin: true,
+    },
+    component: () =>
+      import(/* webpackChunkName: "contactList" */ "./views/Jobs/CreateJob.vue"),
   },
 ];
 

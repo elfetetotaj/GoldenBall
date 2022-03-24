@@ -8,8 +8,10 @@ const PlayerSchema = mongoose.Schema(
     goals: Number,
     price: String,
     team: String,
+    files: String,
     Photo: String,
   },
+  { typeKey: "$type" }
 );
 const model = mongoose.model("player", PlayerSchema);
 

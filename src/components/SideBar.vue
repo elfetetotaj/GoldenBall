@@ -1,56 +1,51 @@
 <template>
-  <div>
-    <br />
-    <br />
-    <h1>Welcome to the Admin Page</h1>
-    <br />
-    <p>Please follow links on the left sidde for administration :)</p>
-    <div class="sidebar" :class="isOpened ? 'open' : ''" :style="cssVars">
-      <div class="logo-details" style="margin: 6px 14px 0 14px">
-        <i class="bx icon" :class="menuIcon" />
-        <div class="logo_name">GoldenBall</div>
-        <i
-          class="bx"
-          :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
-          id="btn"
-          @click="isOpened = !isOpened"
-        />
+  <div class="sidebar" :class="isOpened ? 'open' : ''" :style="cssVars">
+    <div class="logo-details" style="margin: 6px 14px 0 14px">
+      <i class="bx icon" :class="menuIcon" />
+      <div class="logo_name">
+        {{ menuTitle }}
       </div>
+      <i
+        class="bx"
+        :class="isOpened ? 'bx-menu-alt-right' : 'bx-menu'"
+        id="btn"
+        @click="isOpened = !isOpened"
+      />
+    </div>
 
-      <div
-        style="
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          flex-grow: 1;
-          max-height: calc(100% - 60px);
-        "
-      >
-        <div id="my-scroll" style="margin: 6px 14px 0 14px">
-          <ul class="nav-list" style="overflow: visible">
-            <li v-if="isSearch" @click="isOpened = true">
-              <i class="bx bx-search" />
-              <input
-                type="text"
-                :placeholder="searchPlaceholder"
-                @input="$emit('search-input-emit', $event.target.value)"
-              />
-              <span class="tooltip">{{ searchTooltip }}</span>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        max-height: calc(100% - 60px);
+      "
+    >
+      <div id="my-scroll" style="margin: 6px 14px 0 14px">
+        <ul class="nav-list" style="overflow: visible">
+          <li v-if="isSearch" @click="isOpened = true">
+            <i class="bx bx-search" />
+            <input
+              type="text"
+              :placeholder="searchPlaceholder"
+              @input="$emit('search-input-emit', $event.target.value)"
+            />
+            <span class="tooltip">{{ searchTooltip }}</span>
+          </li>
+
+          <span v-for="(menuItem, index) in menuItems" :key="index">
+            <li>
+              <a :href="menuItem.link">
+                <i class="bx" :class="menuItem.icon || 'bx-square-rounded'" />
+                <span class="links_name">{{ menuItem.name }}</span>
+              </a>
+              <span class="tooltip">{{
+                menuItem.tooltip || menuItem.name
+              }}</span>
             </li>
-
-            <span v-for="(menuItem, index) in menuItems" :key="index">
-              <li>
-                <a :href="menuItem.link">
-                  <i class="bx" :class="menuItem.icon || 'bx-square-rounded'" />
-                  <span class="links_name">{{ menuItem.name }}</span>
-                </a>
-                <span class="tooltip">{{
-                  menuItem.tooltip || menuItem.name
-                }}</span>
-              </li>
-            </span>
-          </ul>
-        </div>
+          </span>
+        </ul>
       </div>
     </div>
   </div>
@@ -95,12 +90,12 @@ export default {
     menuItems: {
       type: Array,
       default: () => [
-        // {
-        //   link: "#",
-        //   name: "Dashboard",
-        //   tooltip: "Dashboard",
-        //   icon: "bx-grid-alt",
-        // },
+        {
+          link: "#",
+          name: "Dashboard",
+          tooltip: "Dashboard",
+          icon: "bx-grid-alt",
+        },
         {
           link: "/playerList",
           name: "Players",
@@ -114,34 +109,34 @@ export default {
           icon: "bx-user",
         },
         {
-          link: "/newsList",
-          name: "NewsList",
-          tooltip: "NewsList",
-          icon: "bx-new",
+          link: "#",
+          name: "Analytics",
+          tooltip: "Analytics",
+          icon: "bx-user",
         },
         {
-          link: "/createNews",
-          name: "CreateNew",
-          tooltip: "CreateNew",
-          icon: "bx-new",
+          link: "#",
+          name: "File Manager",
+          tooltip: "Files",
+          icon: "bx-folder",
         },
         {
-          link: "/contactList",
-          name: "ContactList",
-          tooltip: "ContactList",
-          icon: "bx-new",
+          link: "#",
+          name: "Order",
+          tooltip: "Order",
+          icon: "bx-cart-alt",
         },
         {
-          link: "/jobsList",
-          name: "JobList",
-          tooltip: "JobList",
-          icon: "bx-new",
+          link: "#",
+          name: "Saved",
+          tooltip: "Saved",
+          icon: "bx-heart",
         },
         {
-          link: "/createJobs",
-          name: "CreateJob",
-          tooltip: "CreateJob",
-          icon: "bx-new",
+          link: "#",
+          name: "Setting",
+          tooltip: "Setting",
+          icon: "bx-cog",
         },
       ],
     },

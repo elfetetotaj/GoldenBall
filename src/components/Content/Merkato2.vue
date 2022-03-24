@@ -19,7 +19,11 @@
       </div>
       <div class="row">
         <!-- Single Advisor-->
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div
+          v-for="player in players"
+          :key="player"
+          class="col-12 col-sm-6 col-lg-3"
+        >
           <div
             class="single_advisor_profile wow fadeInUp"
             data-wow-delay="0.2s"
@@ -35,78 +39,11 @@
             </div>
             <!-- Team Details-->
             <div class="single_advisor_details_info">
-              <h5>Robert Lewandowski</h5>
-              <p class="designation">FC Bayern Munich</p>
-              <p class="designation"><strong>Price: $85.000.000</strong></p>
-            </div>
-          </div>
-        </div>
-        <!-- Single Advisor-->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div
-            class="single_advisor_profile wow fadeInUp"
-            data-wow-delay="0.3s"
-            style="
-              visibility: visible;
-              animation-delay: 0.3s;
-              animation-name: fadeInUp;
-            "
-          >
-            <!-- Team Thumb-->
-            <div class="advisor_thumb">
-              <img src="@/assets/avatar6.jpg" alt="" />
-            </div>
-            <!-- Team Details-->
-            <div class="single_advisor_details_info">
-              <h5>Eden Hazard</h5>
-              <p class="designation">Real Madrid CF</p>
-              <p class="designation"><strong>Price: $65.000.000</strong></p>
-            </div>
-          </div>
-        </div>
-        <!-- Single Advisor-->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div
-            class="single_advisor_profile wow fadeInUp"
-            data-wow-delay="0.4s"
-            style="
-              visibility: visible;
-              animation-delay: 0.4s;
-              animation-name: fadeInUp;
-            "
-          >
-            <!-- Team Thumb-->
-            <div class="advisor_thumb">
-              <img src="@/assets/avatar7.jpg" alt="" />
-            </div>
-            <!-- Team Details-->
-            <div class="single_advisor_details_info">
-              <h5>Lautaro Martinez</h5>
-              <p class="designation">Inter Milan</p>
-              <p class="designation"><strong>Price: $100.000.000</strong></p>
-            </div>
-          </div>
-        </div>
-        <!-- Single Advisor-->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div
-            class="single_advisor_profile wow fadeInUp"
-            data-wow-delay="0.5s"
-            style="
-              visibility: visible;
-              animation-delay: 0.5s;
-              animation-name: fadeInUp;
-            "
-          >
-            <!-- Team Thumb-->
-            <div class="advisor_thumb">
-              <img src="@/assets/avatar8.jpg" alt="" />
-            </div>
-            <!-- Team Details-->
-            <div class="single_advisor_details_info">
-              <h5>Kevin De Bruyne</h5>
-              <p class="designation">Manchester City F.C.</p>
-              <p class="designation"><strong>Price: $95.000.000</strong></p>
+              <h5>{{ player.name }} {{ player.lastName }}</h5>
+              <p class="designation">{{ player.team }}</p>
+              <p class="designation">
+                <strong>Price: {{ player.price }}</strong>
+              </p>
             </div>
           </div>
         </div>
@@ -115,10 +52,34 @@
   </section>
 </template>
 
-
 <script>
+import apiRequest from "../../utility/apiRequest";
+import axios from "axios";
 export default {
-  name: "Info",
+  props: {
+    player: Object,
+  },
+  components: {},
+  created() {
+    axios
+      .get(`http://localhost:4000/player/list`)
+      .then((response) => {
+        this.players = response.data;
+      })
+      .catch((e) => {
+        this.errors.push(e);
+      });
+  },
+  methods: {
+    async fetchPlayer() {
+      this.playerList = await apiRequest.playerList();
+    },
+  },
+  data() {
+    return {
+      players: [],
+    };
+  },
 };
 </script>
 <style scoped>
